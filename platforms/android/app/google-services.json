@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "691195005860",
+    "project_id": "biblia-sagrada-viva---v1",
+    "storage_bucket": "biblia-sagrada-viva---v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691195005860:android:93c9206fa799ad361acf31",
+        "android_client_info": {
+          "package_name": "com.phonegap.bibliaviva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691195005860-srkj02q6n2o5kon4dlkurgmemavgi57s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAARwUAFMGQDn2cLV8Gt30ZiZ0YL1t1Ti4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691195005860-srkj02q6n2o5kon4dlkurgmemavgi57s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7091486462236476~8144821046"
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.phonegap.bibliaviva",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "BUNDLE_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 10017,
+        "versionName": "1.0.17",
+        "outputFile": "app-release.apk",
+        "fullName": "release",
+        "baseName": "release",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.phonegap.bibliaviva",
+        "split": "",
+        "minSdkVersion": "19"
+      }
+    }
+  ]
+}

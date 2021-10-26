@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.phonegap.bibliaviva",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 10017,
+      "versionName": "10017",
+      "enabled": true,
+      "outputFile": "app-debug.apk"
+    }
+  ]
+}
