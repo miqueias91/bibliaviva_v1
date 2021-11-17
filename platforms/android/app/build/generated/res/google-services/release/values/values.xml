@@ -6,4 +6,5 @@
     <string name="google_app_id" translatable="false">1:691195005860:android:93c9206fa799ad361acf31</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAARwUAFMGQDn2cLV8Gt30ZiZ0YL1t1Ti4</string>
     <string name="google_storage_bucket" translatable="false">biblia-sagrada-viva---v1.appspot.com</string>
+    <string name="project_id" translatable="false">biblia-sagrada-viva---v1</string>
 </resources>

@@ -15,13 +15,13 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
     <script type="text/javascript" src="lib/SocialSharing/SocialSharing.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
-    <title>Bíblia Sagrada Viva</title>
+    <script type="text/javascript" src="js/config.js"></script>
+    <title>INNOVATE SOFT</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 <template id="tabbar.html">
   <ons-page id="tabbar-page">
     <ons-toolbar id="tabbar_">
-        <div class="center"><center>Bíblia Sagrada Viva</center></div>
+        <div class="center"><center>Bíblia Sagrada</center></div>
       <div class="left">
         <ons-toolbar-button onclick="fn.toggleMenu()">
           <ons-icon style="color: #f5f5f5" icon="ion-navicon, material:md-menu"></ons-icon>
@@ -53,7 +53,7 @@
     <script>
       ons.getScriptPage().addEventListener('prechange', function(event) {
         if (event.target.matches('#appTabbar')) {
-              event.currentTarget.querySelector('#tabbar_ .center center').innerHTML = 'Bíblia Sagrada Viva';
+              event.currentTarget.querySelector('#tabbar_ .center center').innerHTML = config.titulo;
         }
       });
     </script>
@@ -193,7 +193,7 @@
 <template id="home.html">
   <ons-page>
     <section style="text-align:left;border-bottom: 1px solid #ccc;background-color: #fff;">
-        <div id="versiculo_inicio">Dêem graças ao Senhor, proclamem o seu nome; divulguem os seus feitos entre as nações - Salmos 105:1</div>
+        <div id="versiculo_inicio"></div>
     </section>
 
     <section style="margin: 16px" id="tela_login_google">
@@ -287,16 +287,18 @@
         var playerID = window.localStorage.getItem('playerID');
         var pushToken = window.localStorage.getItem('pushToken');
         var id_user = window.localStorage.getItem('id_user');
-        var app = 'viva';
-        fn.loadLink('https://www.innovatesoft.com.br/auth?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+        var app_ = config.app_;
+        var url = 'https://www.innovatesoft.com.br/auth?app='+app_+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user;
+        fn.loadLink(url);
       };
       var versaoPro = function() {
         var uid = window.localStorage.getItem('uid');
         var playerID = window.localStorage.getItem('playerID');
         var pushToken = window.localStorage.getItem('pushToken');
         var id_user = window.localStorage.getItem('id_user');
-        var app = 'viva';
-        fn.loadLink('https://www.innovatesoft.com.br/pricing?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+        var app_ = config.app_;
+        var url = 'https://www.innovatesoft.com.br/pricing?app='+app_+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user;
+        fn.loadLink(url);
       };
     </script>
   </ons-page>
@@ -316,7 +318,6 @@
 
     <script>
       ons.getScriptPage().onInit = function () {
-        app.registraAcesso('viva/versiculosMarcados.html');
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
@@ -325,7 +326,7 @@
         var lista_marcadores = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
         if (lista_marcadores) {
           for(var i=0; i<lista_marcadores.length; i++) {
-            app.buscaVersiculo('viva',lista_marcadores[i]['livro']+"||"+lista_marcadores[i]['num_capitulo']+"."+(parseInt(lista_marcadores[i]['num_versiculo'])+0),"textoVersiculo"); 
+            app.buscaVersiculo(config.versao_biblia,lista_marcadores[i]['livro']+"||"+lista_marcadores[i]['num_capitulo']+"."+(parseInt(lista_marcadores[i]['num_versiculo'])+0),"textoVersiculo"); 
           }   
         }
       }
@@ -433,7 +434,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-          app.registraAcesso('viva/ajustes.html');
           modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
           $("#modo_noturno").attr("checked",modo_noturno);
           
@@ -529,7 +529,6 @@
           $("#mensagemMinhasInformacoes").html('<p class="intro">Você está usando a versão PRO, válida até '+datahora_pro+'.</p>');
         }
 
-        app.registraAcesso('viva/minhaConfiguracao.html');
         this.querySelector('#minhasInformacoes_ div.center').textContent = 'Minha Configuração';
 
         $( "#salvar_minhas_informacoes" ).click(function() {
@@ -579,8 +578,9 @@
           var playerID = window.localStorage.getItem('playerID');
           var pushToken = window.localStorage.getItem('pushToken');
           var id_user = window.localStorage.getItem('id_user');
-          var app = 'viva';
-          fn.loadLink('https://www.innovatesoft.com.br/auth?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+          var app_ = config.app_;
+          var url = 'https://www.innovatesoft.com.br/auth?app='+app_+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user;
+          fn.loadLink(url);
         });
 
         $( "#btn_sair_google" ).click(function() {
@@ -592,8 +592,8 @@
           var playerID = window.localStorage.getItem('playerID');
           var pushToken = window.localStorage.getItem('pushToken');
           var id_user = window.localStorage.getItem('id_user');
-          var app = 'viva';
-          fn.loadLink('https://www.innovatesoft.com.br/logon?app='+app+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
+          var app_ = config.app_;
+          fn.loadLink('https://www.innovatesoft.com.br/logon?app='+app_+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user);
           $("#nome").val('');
           $("#email").val('');
           $("#btn_entrar_google").css('display','');
@@ -801,7 +801,6 @@
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
           admob.interstitial.show();
         }
-        app.registraAcesso('viva/palavraDia.html');
         $("#textoVersiculo").html('');
         this.querySelector('#palavraDia_ div.center').textContent = 'Palavra do Dia';
     
@@ -855,7 +854,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-          app.registraAcesso('viva/capitulosLidos.html');
           $("#textoCapitulosLidos").html('');
           this.querySelector('#capitulosLidos_ div.center').textContent = 'Capítulos Lidos';
           var lista_capitulos = JSON.parse(localStorage.getItem('lista-capitulos') || '[]');
@@ -921,7 +919,6 @@
 
     <script>
         ons.getScriptPage().onInit = function () {
-          app.registraAcesso('viva/hinario.html');
           this.querySelector('#hinario_ div.center').textContent = 'Hinários';
         }
     </script>
@@ -978,7 +975,6 @@
     </div>
     <script>
         ons.getScriptPage().onInit = function () {
-          app.registraAcesso('viva/biblia.html');
           this.querySelector('#biblia_ div.center').textContent = 'Bíblia Sagrada';
           var abriu_pesquisa_biblia = false
           $( "#botao_pesquisa_biblia" ).click(function() {
@@ -1264,7 +1260,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-          app.registraAcesso('viva/harpa.html');
           fn.showDialog('modal-aguarde');
           app.listaHinario();
           var timeoutID = 0;
@@ -1532,7 +1527,6 @@
 
     <script>
         ons.getScriptPage().onInit = function () {
-          app.registraAcesso('viva/antigoTestamento.html');
           this.querySelector('#antigoTestamento_ div.center').textContent = 'Antigo Testamento';
         }
     </script>
@@ -1704,7 +1698,6 @@
     </ons-list>
     <script>
         ons.getScriptPage().onInit = function () {
-          app.registraAcesso('viva/novoTestamento.html');
           this.querySelector('#novoTestamento_ div.center').textContent = 'Novo Testamento';
         }
     </script>
@@ -1843,7 +1836,6 @@
           ons.getScriptPage().onInit = function () {
             var dados = this.data.title.split('||'); 
             var ultimoCap = dados[2];
-            app.registraAcesso('viva/textoLivro.html?livro='+dados[0]+'&cap='+dados[3]);
             this.querySelector('#textoLivro_ div.center').textContent = dados[1]+' '+dados[3];
             //CHAMA DA FUNÇÃO PARA ABRIR MODAL
             fn.showDialog('modal-aguarde');
@@ -1934,7 +1926,6 @@
                 $("#controle_rolagem").css("display","none");
 
                 $("#atual").val(parseInt($("#atual").val())+1)
-                app.registraAcesso('viva/textoLivro.html?livro='+dados[0]+'&cap='+parseInt($("#atual").val()));
                 //CHAMA DA FUNÇÃO PARA ABRIR MODAL
                 fn.showDialog('modal-aguarde');
                 var versaoId = window.localStorage.getItem('versao-biblia');
@@ -1955,7 +1946,6 @@
 
                 $("#controle_rolagem").css("display","none");
                 $("#atual").val(parseInt($("#atual").val())-1)
-                app.registraAcesso('viva/textoLivro.html?livro='+dados[0]+'&cap='+parseInt($("#atual").val()));
                 //CHAMA DA FUNÇÃO PARA ABRIR MODAL
                 fn.showDialog('modal-aguarde');
                 var versaoId = window.localStorage.getItem('versao-biblia');
@@ -1976,7 +1966,7 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-              text += 'Versão: Bíblia Sagrada Viva\nLink: https://bit.ly/3g176iI';
+              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
               cordova.plugins.clipboard.copy(text);
               cordova.plugins.clipboard.paste(function (text) { 
                 ons.notification.toast('Copiado para a área de transferência.', { buttonLabel: 'Ok', timeout: 2000 });
@@ -1994,7 +1984,7 @@
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
 
-              text += 'Versão: Bíblia Sagrada Viva\nLink: https://bit.ly/3g176iI';
+              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
               window.plugins.socialsharing.shareViaWhatsApp(
                 text, 
                 null, 
@@ -2018,7 +2008,7 @@
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
 
-              text += 'Versão: Bíblia Sagrada Viva\nLink: https://bit.ly/3g176iI';
+              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
               window.plugins.socialsharing.shareViaInstagram(
                 text, 
                 null, 
@@ -2041,7 +2031,7 @@
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
 
-              text += 'Versão: Bíblia Sagrada Viva\nLink: https://bit.ly/3g176iI';
+              text += 'Versão: '+config.titulo+'\nLink: '+config.url;
               window.plugins.socialsharing.shareViaTwitter(text);
             });
 
@@ -2106,7 +2096,6 @@
             admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
-          app.registraAcesso('viva/conteudoHarpa.html?livro='+dados[0]);
           this.querySelector('#conteudoHarpa_ div.center').textContent = dados[0]+' - '+dados[1];
           $("#conteudoHarpa").html('');
           app.buscaHinario(dados[0]);
@@ -2151,7 +2140,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-          app.registraAcesso('viva/listaFavoritosHinario.html');
           fn.showDialog('modal-aguarde');
           app.listaFavoritoHinario();
           var timeoutID = 0;
@@ -2201,7 +2189,6 @@
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-        app.registraAcesso('viva/notificacoes.html');
         this.querySelector('#notificacoes_ div.center').textContent = 'Notificações';
 
 
@@ -2296,7 +2283,6 @@
         </div>
     <script>
       ons.getScriptPage().onInit = function () {
-        app.registraAcesso('viva/notificacao.html');
         var dados = this.data.title.split('||'); 
         this.querySelector('#notificacao_ div.center').textContent = dados[0];
         notificacoes = JSON.parse(localStorage.getItem('lista-notificacoes'));
@@ -2493,10 +2479,9 @@
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-        app.registraAcesso('viva/versoes.html');
         this.querySelector('#versoes_ div.center').textContent = 'Versões';
         if (!window.localStorage.getItem('versao-biblia')) {
-          versaoId = 'viva';
+          versaoId = config.versao_biblia;
         }
         else{
           var versaoId = window.localStorage.getItem('versao-biblia');
@@ -2856,7 +2841,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             admob.interstitial.show();
           }
-          app.registraAcesso('viva/cantor.html');
           fn.showDialog('modal-aguarde');
           app.listaCantor();
           var timeoutID = 0;
@@ -2925,7 +2909,6 @@
             admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
-          app.registraAcesso('viva/conteudoCantor.html?livro='+dados[0]);
           this.querySelector('#conteudoCantor_ div.center').textContent = dados[0]+' - '+dados[1];
           $("#conteudoCantor").html('');
           app.buscaCantor(dados[0]);
@@ -3200,7 +3183,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             //admob.interstitial.show();
           }
-          app.registraAcesso('viva/palavraOrientacaoConsolo.html');
           this.querySelector('#orientacaoConsolo_ div.center').textContent = 'Orientação e Consolo';
 
           var palavraOrientacaoConsolo = JSON.parse(localStorage.getItem('lista-orientacao-consolo'));
@@ -3263,7 +3245,6 @@
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
             //admob.interstitial.show();
           }
-          app.registraAcesso('viva/palavraOrientacaoConsoloVersiculos.html');
           fn.showDialog('modal-aguarde');
           var dados = this.data.title.split('||'); 
           app.buscaPalavraOrientacaoVersiculos(dados[0]);

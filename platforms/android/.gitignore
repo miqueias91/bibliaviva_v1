@@ -1,5 +1,6 @@
 # Non-project-specific build files:
 build.xml
+local.properties
 /gradlew
 /gradlew.bat
 /gradle
@@ -9,5 +10,12 @@ ant-gen
 # Eclipse builds
 gen
 out
-# Gradle builds
+# Gradle build artifacts
+.gradle
+.gradletasknamecache
 /build
+/CordovaLib/build
+/app/build
+gradle-app.setting
+# Android Studio
+.idea

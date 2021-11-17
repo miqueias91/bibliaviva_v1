@@ -1,4 +1,4 @@
-#Sat Oct 23 16:07:24 BRT 2021
-base.0=C\:\\xampp\\htdocs\\biblia\\bibliaviva_v1\\platforms\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+#Wed Nov 17 15:24:02 BRT 2021
+base.0=/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

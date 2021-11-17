@@ -30,6 +30,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-codeplay-facebookads-free.codeplayfacebookads",
+    "file": "plugins/cordova-plugin-codeplay-facebookads-free/www/codeplayfacebookads.js",
+    "pluginId": "cordova-plugin-codeplay-facebookads-free",
+    "clobbers": [
+      "cordova.plugins.codeplayfacebookads"
+    ]
+  },
+  {
     "id": "cordova-plugin-dialogs.notification",
     "file": "plugins/cordova-plugin-dialogs/www/notification.js",
     "pluginId": "cordova-plugin-dialogs",
@@ -178,14 +186,6 @@ module.exports = [
     "clobbers": [
       "OneSignal"
     ]
-  },
-  {
-    "id": "phonegap-plugin-push.PushNotification",
-    "file": "plugins/phonegap-plugin-push/www/push.js",
-    "pluginId": "phonegap-plugin-push",
-    "clobbers": [
-      "PushNotification"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -195,6 +195,8 @@ module.exports.metadata =
   "cordova-clipboard": "1.3.0",
   "cordova-promise-polyfill": "0.0.2",
   "cordova-plugin-admob-free": "0.27.0",
+  "cordova-plugin-androidx-adapter": "1.1.3",
+  "cordova-plugin-codeplay-facebookads-free": "0.0.1",
   "cordova-plugin-console": "1.0.7",
   "cordova-plugin-dialogs": "1.2.1",
   "cordova-plugin-insomnia": "4.3.0",
@@ -206,8 +208,7 @@ module.exports.metadata =
   "cordova-support-google-services": "1.3.2",
   "cordova.plugins.diagnostic": "4.0.12",
   "onesignal-cordova-plugin": "2.4.6",
-  "phonegap-plugin-multidex": "1.0.0",
-  "phonegap-plugin-push": "2.1.3"
+  "phonegap-plugin-multidex": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

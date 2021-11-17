@@ -1,0 +1,61 @@
+{
+  "_from": "cordova-plugin-codeplay-facebookads-free",
+  "_id": "cordova-plugin-codeplay-facebookads-free@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-iQ8ZGGWDEO4RMgUbAfmi5COKrRqLOoKEtT1/9/r4JZ5R01nggtxSFu310E/PcmSSR3wc57SIhtgSe4i5L5G6Tg==",
+  "_location": "/cordova-plugin-codeplay-facebookads-free",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-codeplay-facebookads-free",
+    "name": "cordova-plugin-codeplay-facebookads-free",
+    "escapedName": "cordova-plugin-codeplay-facebookads-free",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-codeplay-facebookads-free/-/cordova-plugin-codeplay-facebookads-free-0.2.0.tgz",
+  "_shasum": "a0c5119829e6fa00caebdd74f8067d7537df2933",
+  "_spec": "cordova-plugin-codeplay-facebookads-free",
+  "_where": "/var/www/html/biblia/bibliaviva_v1",
+  "author": {
+    "name": "Merbin Joe"
+  },
+  "bugs": {
+    "url": "https://github.com/merbin2012/cordova-plugin-codeplay-facebookads-free/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-codeplay-facebookads-free",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Free facebook audience network ads for cordova user. This supports banner ads, Interstitial ads and reward video.",
+  "homepage": "https://github.com/merbin2012/cordova-plugin-codeplay-facebookads-free#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-facebook",
+    "cordova-audience-network",
+    "cordova-free-ads",
+    "cordova-free-audience-network",
+    "facebook-ads",
+    "cordova-facebook-ads",
+    "facebook",
+    "audience-network"
+  ],
+  "license": "ISC",
+  "name": "cordova-plugin-codeplay-facebookads-free",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merbin2012/cordova-plugin-codeplay-facebookads-free.git"
+  },
+  "version": "0.2.0"
+}
