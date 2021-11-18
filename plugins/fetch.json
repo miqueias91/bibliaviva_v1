@@ -79,22 +79,12 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-x-socialsharing": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-x-socialsharing"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
-    }
-  },
   "es6-promise-plugin": {
     "source": {
       "type": "registry",
-      "id": "es6-promise-plugin@^4.2.2"
+      "id": "es6-promise-plugin@^4.1.0"
     },
-    "is_top_level": true,
+    "is_top_level": false,
     "variables": {}
   },
   "cordova-plugin-splashscreen": {
@@ -127,7 +117,9 @@
       "id": "cordova-admob-sdk"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "PLAY_SERVICES_VERSION": "11.0.4"
+    }
   },
   "cordova-plugin-admob-free": {
     "source": {
@@ -170,5 +162,15 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-x-socialsharing": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-x-socialsharing@5.6.4"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+    }
   }
 }

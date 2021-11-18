@@ -209,6 +209,7 @@ var app = {
   },
   // Update DOM on a Received Event
   receivedEvent: function(id) {
+    this.carregaPalavraDia();
     this.init();
     this.carregaQuiz();
     this.firebase();
@@ -1754,7 +1755,23 @@ var app = {
         }
       }   
     }
-  }
+  },
+  carregaPalavraDia: function() {
+    $.ajax({
+      type : "GET",
+      url : "https://innovatesoft.com.br/webservice/app/buscaPalavraDiaAleatoria.php",
+      dataType : "json",
+      error: function(e) {
+        app.buscaVersiculoDia(versiculos_do_dia[0],"versiculo_inicio");
+      },
+      success : function(data){
+        if (data) {
+          versiculos_do_dia = '[]';
+          versiculos_do_dia = (data);
+          app.buscaVersiculoDia(versiculos_do_dia[0],"versiculo_inicio");
+        }
+      }
+    });
+  },
 };
-
 app.initialize();

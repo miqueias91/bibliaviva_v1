@@ -16,11 +16,9 @@
     "cordova-plugin-splashscreen": "^5.0.3",
     "cordova-plugin-statusbar": "~2.1.3",
     "cordova-plugin-whitelist": "~1.2.1",
-    "cordova-plugin-x-socialsharing": "5.6.4",
     "cordova-promise-polyfill": "0.0.2",
     "cordova-support-google-services": "^1.3.2",
     "cordova.plugins.diagnostic": "^4.0.12",
-    "es6-promise-plugin": "^4.2.2",
     "onesignal-cordova-plugin": "^2.4.6",
     "org.apache.cordova.geolocation": "^0.3.6",
     "phonegap-plugin-multidex": "^1.0.0"
@@ -40,10 +38,10 @@
         "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046"
       },
       "cordova-plugin-insomnia": {},
-      "cordova-plugin-x-socialsharing": {},
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
-      "cordova-plugin-codeplay-facebookads-free": {}
+      "cordova-plugin-codeplay-facebookads-free": {},
+      "cordova-plugin-x-socialsharing": {}
     },
     "platforms": [
       "android"
@@ -53,6 +51,8 @@
     "cordova-android": "^9.1.0",
     "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-androidx-adapter": "^1.1.3",
-    "cordova-plugin-codeplay-facebookads-free": "^0.2.0"
+    "cordova-plugin-codeplay-facebookads-free": "^0.2.0",
+    "cordova-plugin-x-socialsharing": "^5.6.4",
+    "es6-promise-plugin": "^4.2.2"
   }
 }

@@ -2,8 +2,8 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.phonegap.bibliaviva"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10018"
-6    android:versionName="1.0.18" >
+5    android:versionCode="10019"
+6    android:versionName="1.0.19" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
@@ -152,339 +152,338 @@
 76-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:5:53-87
 77        android:label="@string/app_name"
 77-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:5:88-120
-78        android:supportsRtl="true"
+78        android:supportsRtl="true" >
 78-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:5:121-147
-79        android:testOnly="true" >
-80        <activity
-80-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
-81            android:name="com.phonegap.bibliaviva.MainActivity"
-81-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:205-232
-82            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-82-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:19-135
-83            android:label="@string/activity_name"
-83-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:136-173
-84            android:launchMode="singleTop"
-84-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:174-204
-85            android:screenOrientation="portrait"
-85-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:233-269
-86            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
-86-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:270-332
-87            android:windowSoftInputMode="adjustResize" >
-87-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:333-375
-88            <intent-filter android:label="@string/launcher_name" >
-88-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:7:13-10:29
-88-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:7:28-65
-89                <action android:name="android.intent.action.MAIN" />
-89-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:8:17-69
-89-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:8:25-66
-90
-91                <category android:name="android.intent.category.LAUNCHER" />
-91-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
-91-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
-92            </intent-filter>
-93        </activity>
-94        <activity
-94-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:9-233
-95            android:name="com.google.android.gms.ads.AdActivity"
-95-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:129-181
-96            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-96-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:19-128
-97            android:theme="@android:style/Theme.Translucent" />
-97-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:182-230
-98
-99        <meta-data
-99-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:13:9-134
-100            android:name="com.google.android.gms.ads.APPLICATION_ID"
-100-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:13:20-76
-101            android:value="ca-app-pub-7091486462236476~8144821046" />
-101-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:13:77-131
-102
-103        <receiver
-103-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:14:9-18:20
-104            android:name="nl.xservices.plugins.ShareChooserPendingIntent"
-104-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:14:42-103
-105            android:enabled="true" >
-105-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:14:19-41
-106            <intent-filter>
-106-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:15:13-17:29
-107                <action android:name="android.intent.action.SEND" />
-107-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:16:17-69
-107-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:16:25-66
-108            </intent-filter>
-109        </receiver>
-110
-111        <provider
-112            android:name="nl.xservices.plugins.FileProvider"
-112-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:135-183
-113            android:authorities="com.phonegap.bibliaviva.sharing.provider"
-113-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:19-74
-114            android:exported="false"
-114-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:75-99
-115            android:grantUriPermissions="true" >
-115-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:100-134
-116            <meta-data
-116-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:20:13-115
-117                android:name="android.support.FILE_PROVIDER_PATHS"
-117-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:20:24-74
-118                android:resource="@xml/sharing_paths" />
-118-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:20:75-112
-119        </provider>
-120
-121        <amazon:enable-feature
-121-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:9-159
-122            xmlns:amazon="http://schemas.amazon.com/apk/res/android"
-122-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:100-156
-123            android:name="com.amazon.device.messaging"
-123-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:32-74
-124            android:required="false" />
-124-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:75-99
-125
-126        <service
-126-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:23:9-92
-127            android:name="com.onesignal.ADMMessageHandler"
-127-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:23:43-89
-128            android:exported="false" />
-128-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:23:18-42
-129
-130        <receiver
-130-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:24:9-30:20
-131            android:name="com.onesignal.ADMMessageHandler$Receiver"
-131-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:24:19-74
-132            android:permission="com.amazon.device.messaging.permission.SEND" >
-132-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:24:75-139
-133            <intent-filter>
-133-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:25:13-29:29
-134                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
-134-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:26:17-90
-134-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:26:25-87
-135                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
-135-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:27:17-85
-135-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:27:25-82
-136
-137                <category android:name="com.phonegap.bibliaviva" />
-137-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:17-68
-137-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:27-65
-138            </intent-filter>
-139        </receiver>
-140
-141        <meta-data
-141-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:50:9-52:51
-142            android:name="onesignal_app_id"
-142-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:51:13-44
-143            android:value="" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
-143-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:52:13-48
-144        <meta-data
-144-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:54:9-56:70
-145            android:name="onesignal_google_project_number"
-145-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:55:13-59
-146            android:value="str:REMOTE" />
-146-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:56:13-67
-147
-148        <receiver
-148-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:58:9-68:20
-149            android:name="com.onesignal.GcmBroadcastReceiver"
-149-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:59:13-62
-150            android:permission="com.google.android.c2dm.permission.SEND" >
-150-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:60:13-73
-151
-152            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
-153            <intent-filter android:priority="999" >
-153-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
-153-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:63:28-50
-154                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-154-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:17-81
-154-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:25-78
-155
-156                <category android:name="com.phonegap.bibliaviva" />
-156-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:17-68
-156-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:27-65
-157            </intent-filter>
-158        </receiver>
-159        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
-159-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:69:9-77
-159-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:69:19-74
-160
-161        <service android:name="com.onesignal.GcmIntentService" />
-161-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:71:9-66
-161-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:71:18-63
-162        <service
-162-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:72:9-74:72
-163            android:name="com.onesignal.GcmIntentJobService"
-163-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:73:13-61
-164            android:permission="android.permission.BIND_JOB_SERVICE" />
-164-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:74:13-69
-165        <service
-165-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:75:9-77:72
-166            android:name="com.onesignal.RestoreJobService"
-166-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:76:13-59
-167            android:permission="android.permission.BIND_JOB_SERVICE" />
-167-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:77:13-69
-168        <service
-168-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:78:9-80:72
-169            android:name="com.onesignal.RestoreKickoffJobService"
-169-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:79:13-66
-170            android:permission="android.permission.BIND_JOB_SERVICE" />
-170-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:80:13-69
-171        <service
-171-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:81:9-83:43
-172            android:name="com.onesignal.SyncService"
-172-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:82:13-53
-173            android:stopWithTask="true" />
-173-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:83:13-40
-174        <service
-174-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:84:9-86:72
-175            android:name="com.onesignal.SyncJobService"
-175-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:85:13-56
-176            android:permission="android.permission.BIND_JOB_SERVICE" />
-176-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:86:13-69
-177
-178        <activity
-178-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:88:9-90:75
-179            android:name="com.onesignal.PermissionsActivity"
-179-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:89:13-61
-180            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-180-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:90:13-72
-181
-182        <service android:name="com.onesignal.NotificationRestoreService" />
-182-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:92:9-76
-182-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:92:18-73
-183
-184        <receiver android:name="com.onesignal.BootUpReceiver" >
-184-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:94:9-99:20
-184-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:94:19-62
-185            <intent-filter>
-185-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:95:13-98:29
-186                <action android:name="android.intent.action.BOOT_COMPLETED" />
-186-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:96:17-79
-186-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:96:25-76
-187                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-187-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:97:17-82
-187-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:97:25-79
-188            </intent-filter>
-189        </receiver>
-190        <receiver android:name="com.onesignal.UpgradeReceiver" >
-190-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:100:9-104:20
-190-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:100:19-63
-191            <intent-filter>
-191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:101:13-103:29
-192                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-192-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:102:17-84
-192-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:102:25-81
-193            </intent-filter>
-194        </receiver>
-195
-196        <activity
-196-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:19:9-23:75
-197            android:name="com.facebook.ads.AudienceNetworkActivity"
-197-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:20:13-68
-198            android:configChanges="keyboardHidden|orientation|screenSize"
-198-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:21:13-74
-199            android:exported="false"
-199-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:22:13-37
-200            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-200-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:23:13-72
-201
-202        <provider
-202-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:25:9-28:40
-203            android:name="com.facebook.ads.AudienceNetworkContentProvider"
-203-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:26:13-75
-204            android:authorities="com.phonegap.bibliaviva.AudienceNetworkContentProvider"
-204-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:27:13-82
-205            android:exported="false" />
-205-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:28:13-37
-206
-207        <activity
-207-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:9-172
-208            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-208-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:19-85
-209            android:exported="false"
-209-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:146-170
-210            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-210-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:86-145
-211        <!--
-212 FirebaseMessagingService performs security checks at runtime,
-213             no need for explicit permissions despite exported="true"
-214        -->
-215        <service
-215-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:23:9-27:19
-216            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-216-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:23:18-87
-217            android:exported="true" >
-217-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:23:88-111
-218            <intent-filter android:priority="-500" >
-218-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:24:13-26:29
-218-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:24:28-51
-219                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-219-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:25:17-77
-219-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:25:25-75
-220            </intent-filter>
-221        </service>
-222
-223        <receiver
-223-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:9-35:20
-224            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-224-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:19-84
-225            android:exported="true"
-225-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:85-108
-226            android:permission="com.google.android.c2dm.permission.SEND" >
-226-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:109-169
-227            <intent-filter>
-227-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
-228                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-228-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:17-81
-228-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:25-78
-229
-230                <category android:name="com.phonegap.bibliaviva" />
-230-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:17-68
-230-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:27-65
-231            </intent-filter>
-232        </receiver>
-233        <!--
-234 Internal (not exported) receiver used by the app to start its own exported services
-235             without risk of being spoofed.
-236        -->
-237        <receiver
-237-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:39:9-119
-238            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
-238-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:39:19-92
-239            android:exported="false" />
-239-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:39:93-117
-240        <!--
-241 FirebaseInstanceIdService performs security checks at runtime,
-242             no need for explicit permissions despite exported="true"
-243        -->
-244        <service
-244-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:43:9-47:19
-245            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-245-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:43:18-82
-246            android:exported="true" >
-246-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:43:83-106
-247            <intent-filter android:priority="-500" >
-247-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:44:13-46:29
-247-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:44:28-51
-248                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-248-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:45:17-79
-248-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:45:25-77
-249            </intent-filter>
-250        </service>
-251
-252        <provider
-252-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:9-194
-253            android:name="com.google.firebase.provider.FirebaseInitProvider"
-253-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:79-143
-254            android:authorities="com.phonegap.bibliaviva.firebaseinitprovider"
-254-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:19-78
-255            android:exported="false"
-255-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:144-168
-256            android:initOrder="100" />
-256-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:169-192
-257
-258        <meta-data
-258-->[com.google.android.gms:play-services-basement:11.0.4] /home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/AndroidManifest.xml:20:9-121
-259            android:name="com.google.android.gms.version"
-259-->[com.google.android.gms:play-services-basement:11.0.4] /home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/AndroidManifest.xml:20:20-65
-260            android:value="@integer/google_play_services_version" />
-260-->[com.google.android.gms:play-services-basement:11.0.4] /home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/AndroidManifest.xml:20:66-119
-261    </application>
-262
-263</manifest>
+79        <activity
+79-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
+80            android:name="com.phonegap.bibliaviva.MainActivity"
+80-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:205-232
+81            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+81-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:19-135
+82            android:label="@string/activity_name"
+82-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:136-173
+83            android:launchMode="singleTop"
+83-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:174-204
+84            android:screenOrientation="portrait"
+84-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:233-269
+85            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+85-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:270-332
+86            android:windowSoftInputMode="adjustResize" >
+86-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:6:333-375
+87            <intent-filter android:label="@string/launcher_name" >
+87-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:7:13-10:29
+87-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:7:28-65
+88                <action android:name="android.intent.action.MAIN" />
+88-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:8:17-69
+88-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:8:25-66
+89
+90                <category android:name="android.intent.category.LAUNCHER" />
+90-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
+90-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+91            </intent-filter>
+92        </activity>
+93        <activity
+93-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:9-233
+94            android:name="com.google.android.gms.ads.AdActivity"
+94-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:129-181
+95            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+95-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:19-128
+96            android:theme="@android:style/Theme.Translucent" />
+96-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:12:182-230
+97
+98        <meta-data
+98-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:13:9-134
+99            android:name="com.google.android.gms.ads.APPLICATION_ID"
+99-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:13:20-76
+100            android:value="ca-app-pub-7091486462236476~8144821046" />
+100-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:13:77-131
+101
+102        <receiver
+102-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:14:9-18:20
+103            android:name="nl.xservices.plugins.ShareChooserPendingIntent"
+103-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:14:42-103
+104            android:enabled="true" >
+104-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:14:19-41
+105            <intent-filter>
+105-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:15:13-17:29
+106                <action android:name="android.intent.action.SEND" />
+106-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:16:17-69
+106-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:16:25-66
+107            </intent-filter>
+108        </receiver>
+109
+110        <provider
+111            android:name="nl.xservices.plugins.FileProvider"
+111-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:135-183
+112            android:authorities="com.phonegap.bibliaviva.sharing.provider"
+112-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:19-74
+113            android:exported="false"
+113-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:75-99
+114            android:grantUriPermissions="true" >
+114-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:19:100-134
+115            <meta-data
+115-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:20:13-115
+116                android:name="android.support.FILE_PROVIDER_PATHS"
+116-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:20:24-74
+117                android:resource="@xml/sharing_paths" />
+117-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:20:75-112
+118        </provider>
+119
+120        <amazon:enable-feature
+120-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:9-159
+121            xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+121-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:100-156
+122            android:name="com.amazon.device.messaging"
+122-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:32-74
+123            android:required="false" />
+123-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:22:75-99
+124
+125        <service
+125-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:23:9-92
+126            android:name="com.onesignal.ADMMessageHandler"
+126-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:23:43-89
+127            android:exported="false" />
+127-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:23:18-42
+128
+129        <receiver
+129-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:24:9-30:20
+130            android:name="com.onesignal.ADMMessageHandler$Receiver"
+130-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:24:19-74
+131            android:permission="com.amazon.device.messaging.permission.SEND" >
+131-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:24:75-139
+132            <intent-filter>
+132-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:25:13-29:29
+133                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+133-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:26:17-90
+133-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:26:25-87
+134                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+134-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:27:17-85
+134-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:27:25-82
+135
+136                <category android:name="com.phonegap.bibliaviva" />
+136-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:17-68
+136-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:27-65
+137            </intent-filter>
+138        </receiver>
+139
+140        <meta-data
+140-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:50:9-52:51
+141            android:name="onesignal_app_id"
+141-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:51:13-44
+142            android:value="" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
+142-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:52:13-48
+143        <meta-data
+143-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:54:9-56:70
+144            android:name="onesignal_google_project_number"
+144-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:55:13-59
+145            android:value="str:REMOTE" />
+145-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:56:13-67
+146
+147        <receiver
+147-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:58:9-68:20
+148            android:name="com.onesignal.GcmBroadcastReceiver"
+148-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:59:13-62
+149            android:permission="com.google.android.c2dm.permission.SEND" >
+149-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:60:13-73
+150
+151            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
+152            <intent-filter android:priority="999" >
+152-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
+152-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:63:28-50
+153                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+153-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:17-81
+153-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:25-78
+154
+155                <category android:name="com.phonegap.bibliaviva" />
+155-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:17-68
+155-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:27-65
+156            </intent-filter>
+157        </receiver>
+158        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
+158-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:69:9-77
+158-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:69:19-74
+159
+160        <service android:name="com.onesignal.GcmIntentService" />
+160-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:71:9-66
+160-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:71:18-63
+161        <service
+161-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:72:9-74:72
+162            android:name="com.onesignal.GcmIntentJobService"
+162-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:73:13-61
+163            android:permission="android.permission.BIND_JOB_SERVICE" />
+163-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:74:13-69
+164        <service
+164-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:75:9-77:72
+165            android:name="com.onesignal.RestoreJobService"
+165-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:76:13-59
+166            android:permission="android.permission.BIND_JOB_SERVICE" />
+166-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:77:13-69
+167        <service
+167-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:78:9-80:72
+168            android:name="com.onesignal.RestoreKickoffJobService"
+168-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:79:13-66
+169            android:permission="android.permission.BIND_JOB_SERVICE" />
+169-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:80:13-69
+170        <service
+170-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:81:9-83:43
+171            android:name="com.onesignal.SyncService"
+171-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:82:13-53
+172            android:stopWithTask="true" />
+172-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:83:13-40
+173        <service
+173-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:84:9-86:72
+174            android:name="com.onesignal.SyncJobService"
+174-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:85:13-56
+175            android:permission="android.permission.BIND_JOB_SERVICE" />
+175-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:86:13-69
+176
+177        <activity
+177-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:88:9-90:75
+178            android:name="com.onesignal.PermissionsActivity"
+178-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:89:13-61
+179            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+179-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:90:13-72
+180
+181        <service android:name="com.onesignal.NotificationRestoreService" />
+181-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:92:9-76
+181-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:92:18-73
+182
+183        <receiver android:name="com.onesignal.BootUpReceiver" >
+183-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:94:9-99:20
+183-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:94:19-62
+184            <intent-filter>
+184-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:95:13-98:29
+185                <action android:name="android.intent.action.BOOT_COMPLETED" />
+185-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:96:17-79
+185-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:96:25-76
+186                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+186-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:97:17-82
+186-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:97:25-79
+187            </intent-filter>
+188        </receiver>
+189        <receiver android:name="com.onesignal.UpgradeReceiver" >
+189-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:100:9-104:20
+189-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:100:19-63
+190            <intent-filter>
+190-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:101:13-103:29
+191                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:102:17-84
+191-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:102:25-81
+192            </intent-filter>
+193        </receiver>
+194
+195        <activity
+195-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:19:9-23:75
+196            android:name="com.facebook.ads.AudienceNetworkActivity"
+196-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:20:13-68
+197            android:configChanges="keyboardHidden|orientation|screenSize"
+197-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:21:13-74
+198            android:exported="false"
+198-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:22:13-37
+199            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+199-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:23:13-72
+200
+201        <provider
+201-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:25:9-28:40
+202            android:name="com.facebook.ads.AudienceNetworkContentProvider"
+202-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:26:13-75
+203            android:authorities="com.phonegap.bibliaviva.AudienceNetworkContentProvider"
+203-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:27:13-82
+204            android:exported="false" />
+204-->[com.facebook.android:audience-network-sdk:6.8.0] /home/miqueias/.gradle/caches/transforms-3/d9a4799342df6d101d5b35b0a669471b/transformed/jetified-audience-network-sdk-6.8.0/AndroidManifest.xml:28:13-37
+205
+206        <activity
+206-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:9-172
+207            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+207-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:19-85
+208            android:exported="false"
+208-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:146-170
+209            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+209-->[com.google.android.gms:play-services-base:11.0.4] /home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/AndroidManifest.xml:19:86-145
+210        <!--
+211 FirebaseMessagingService performs security checks at runtime,
+212             no need for explicit permissions despite exported="true"
+213        -->
+214        <service
+214-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:23:9-27:19
+215            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+215-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:23:18-87
+216            android:exported="true" >
+216-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:23:88-111
+217            <intent-filter android:priority="-500" >
+217-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:24:13-26:29
+217-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:24:28-51
+218                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+218-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:25:17-77
+218-->[com.google.firebase:firebase-messaging:11.0.4] /home/miqueias/.gradle/caches/transforms-3/5a4f5132186a716c6da5e141892b8ee3/transformed/jetified-firebase-messaging-11.0.4/AndroidManifest.xml:25:25-75
+219            </intent-filter>
+220        </service>
+221
+222        <receiver
+222-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:9-35:20
+223            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+223-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:19-84
+224            android:exported="true"
+224-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:85-108
+225            android:permission="com.google.android.c2dm.permission.SEND" >
+225-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:30:109-169
+226            <intent-filter>
+226-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:63:13-67:29
+227                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+227-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:17-81
+227-->[com.onesignal:OneSignal:3.10.5] /home/miqueias/.gradle/caches/transforms-3/91be9054eec7536c9a582e39d712f634/transformed/jetified-OneSignal-3.10.5/AndroidManifest.xml:64:25-78
+228
+229                <category android:name="com.phonegap.bibliaviva" />
+229-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:17-68
+229-->/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml:28:27-65
+230            </intent-filter>
+231        </receiver>
+232        <!--
+233 Internal (not exported) receiver used by the app to start its own exported services
+234             without risk of being spoofed.
+235        -->
+236        <receiver
+236-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:39:9-119
+237            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+237-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:39:19-92
+238            android:exported="false" />
+238-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:39:93-117
+239        <!--
+240 FirebaseInstanceIdService performs security checks at runtime,
+241             no need for explicit permissions despite exported="true"
+242        -->
+243        <service
+243-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:43:9-47:19
+244            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+244-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:43:18-82
+245            android:exported="true" >
+245-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:43:83-106
+246            <intent-filter android:priority="-500" >
+246-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:44:13-46:29
+246-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:44:28-51
+247                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+247-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:45:17-79
+247-->[com.google.firebase:firebase-iid:11.0.4] /home/miqueias/.gradle/caches/transforms-3/9902b21f6301ff4e09cc7f0ef11d1d76/transformed/jetified-firebase-iid-11.0.4/AndroidManifest.xml:45:25-77
+248            </intent-filter>
+249        </service>
+250
+251        <provider
+251-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:9-194
+252            android:name="com.google.firebase.provider.FirebaseInitProvider"
+252-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:79-143
+253            android:authorities="com.phonegap.bibliaviva.firebaseinitprovider"
+253-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:19-78
+254            android:exported="false"
+254-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:144-168
+255            android:initOrder="100" />
+255-->[com.google.firebase:firebase-common:11.0.4] /home/miqueias/.gradle/caches/transforms-3/ae331108d8864a91bafcc90c859ae7ce/transformed/jetified-firebase-common-11.0.4/AndroidManifest.xml:6:169-192
+256
+257        <meta-data
+257-->[com.google.android.gms:play-services-basement:11.0.4] /home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/AndroidManifest.xml:20:9-121
+258            android:name="com.google.android.gms.version"
+258-->[com.google.android.gms:play-services-basement:11.0.4] /home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/AndroidManifest.xml:20:20-65
+259            android:value="@integer/google_play_services_version" />
+259-->[com.google.android.gms:play-services-basement:11.0.4] /home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/AndroidManifest.xml:20:66-119
+260    </application>
+261
+262</manifest>

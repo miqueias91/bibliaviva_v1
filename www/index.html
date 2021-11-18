@@ -275,10 +275,6 @@
     <script type="text/javascript">
       var conta = window.localStorage.getItem('conta');
 
-      var i = Math.floor(Math.random() * (versiculos_do_dia.length));
-      app.buscaVersiculoDia(versiculos_do_dia[i],"versiculo_inicio");
-
-
       if (conta == 'google') {
         $("#tela_login_google").css("display","none");
       }
@@ -1983,19 +1979,11 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-
               text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              window.plugins.socialsharing.shareViaWhatsApp(
-                text, 
-                null, 
-                null, 
-                function() {
-                  ons.notification.toast('Compartilhado no WhatsApp.', { buttonLabel: 'Ok', timeout: 2000 });
-                }, 
-                function(errormsg){
-                  ons.notification.toast('Não foi possível compartilhar.', { buttonLabel: 'Ok', timeout: 2000 });
-                }
-              )
+              cordova.plugins.clipboard.copy(text);
+              cordova.plugins.clipboard.paste(function (text) { 
+                ons.notification.toast('Copiado para a área de transferência, abra o WhatsApp e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+              });
             });
 
             $( ".compartilhar_instagram" ).click(function() {
@@ -2007,18 +1995,11 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-
               text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              window.plugins.socialsharing.shareViaInstagram(
-                text, 
-                null, 
-                function() {
-                  ons.notification.toast('Compartilhado no Instagram.', { buttonLabel: 'Ok', timeout: 2000 });
-                }, 
-                function(errormsg){
-                  ons.notification.toast('Não foi possível compartilhar.', { buttonLabel: 'Ok', timeout: 2000 });
-                }
-              )
+              cordova.plugins.clipboard.copy(text);
+              cordova.plugins.clipboard.paste(function (text) { 
+                ons.notification.toast('Copiado para a área de transferência, abra o Instagram e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+              });
             });
 
             $( ".compartilhar_twitter" ).click(function() {
@@ -2030,9 +2011,11 @@
                 var num_versiculo = parseInt($(this).attr('num_versiculo'))+1;
                 text += txt_versiculo+' '+livro+' '+num_capitulo+':'+num_versiculo+'\n\n';
               });
-
               text += 'Versão: '+config.titulo+'\nLink: '+config.url;
-              window.plugins.socialsharing.shareViaTwitter(text);
+              cordova.plugins.clipboard.copy(text);
+              cordova.plugins.clipboard.paste(function (text) { 
+                ons.notification.toast('Copiado para a área de transferência, abra o Twitter e cole.', { buttonLabel: 'Ok', timeout: 2000 });
+              });
             });
 
             $( ".cores" ).click(function() {

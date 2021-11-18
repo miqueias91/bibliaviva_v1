@@ -56,9 +56,6 @@
       "ANDROID_SUPPORT_VERSION": "28.+",
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
-    "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.phonegap.bibliaviva"
-    },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
@@ -66,5 +63,9 @@
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.phonegap.bibliaviva"
+    }
+  }
 }
