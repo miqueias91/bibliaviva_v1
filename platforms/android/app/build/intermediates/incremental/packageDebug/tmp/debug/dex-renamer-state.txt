@@ -1,4 +1,4 @@
-#Thu Nov 18 13:30:51 BRT 2021
+#Wed Dec 08 08:24:28 BRT 2021
 base.1=/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes2.dex
 path.1=classes2.dex
 base.0=/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
