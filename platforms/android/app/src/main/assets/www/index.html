@@ -78,6 +78,18 @@
         </div>
       </ons-list-item>
 
+      <ons-list-item onclick="fn.pushPage({'id': 'palavraOrientacaoConsolo.html', 'title': 'Orientação e Consolo'})">
+        <div class="left">
+          <i class="fas fa-hands-helping"></i>
+        </div>
+        <div class="center">
+          Orientação e Consolo
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-link"></ons-icon>
+        </div>
+      </ons-list-item>
+
       <ons-list-item onclick="fn.pushPage({'id': 'versiculosMarcados.html', 'title': 'Versículos Marcados'})">
         <div class="left">
             <i class="fas fa-edit"></i>
@@ -222,17 +234,15 @@
       </ons-row>
 
       <ons-row>
-          <ons-col>
-              <ons-card onclick="fn.loadLink('https://www.cristaonarede.com.br/loja.php')" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
-                <div class="title titulo_menu" style="font-size: 15px!important;"><i class="fas fa-store"></i><br>Loja</div>
-              </ons-card>
-          </ons-col>
-   
-          <ons-col>
-              <ons-card onclick="fn.pushPage({'id': 'palavraOrientacaoConsolo.html', 'title': 'Orientação e Consolo'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
-                <div class="title titulo_menu" style="font-size: 15px!important;"><i class="fas fa-hands-helping"></i><br>Orientação e Consolo</div>
-              </ons-card>
-          </ons-col>
+        <ons-col>
+          <ons-card style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
+            <div class="title titulo_menu" style="font-size: 15px!important;">Rádio Online<br><br>
+              <audio controls>
+                <source src="https://server2.webradios.com.br:19222/9222" type="audio/mpeg">                
+              </audio>
+            </div>
+          </ons-card>
+        </ons-col>
       </ons-row>
 
       <ons-row>

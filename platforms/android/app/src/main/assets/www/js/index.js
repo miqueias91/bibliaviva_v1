@@ -1258,8 +1258,9 @@ var app = {
           'userId': playerID,
         },
         error: function(e) {
+          var final_versao_pro = this.dateTime();
+          window.localStorage.setItem("versao_pro", final_versao_pro);
           app.admob();
-          //app.init();
           app.buscaPalavraOrientacaoTopico();
           app.buscaNotificacoes();
         },
@@ -1283,7 +1284,6 @@ var app = {
             window.localStorage.setItem("versao_pro", a['final_versao_pro']);
           }
           app.admob();
-          //app.init();
           app.buscaPalavraOrientacaoTopico();
           app.buscaNotificacoes();
         },

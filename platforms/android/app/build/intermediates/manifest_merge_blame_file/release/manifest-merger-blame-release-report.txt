@@ -2,8 +2,8 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.phonegap.bibliaviva"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="10020"
-6    android:versionName="1.0.20" >
+5    android:versionCode="10022"
+6    android:versionName="1.0.22" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
