@@ -114,6 +114,8 @@ var ultimo_capitulo_lido = localStorage.getItem('ultimo_capitulo_lido');
 var fonte_versiculo = JSON.parse(localStorage.getItem('fonte-versiculo') || '20');
 localStorage.setItem("fonte-versiculo", fonte_versiculo);
 var modo_noturno = JSON.parse(localStorage.getItem('modo-noturno') || false);
+var planos_marcados = JSON.parse(localStorage.getItem('planos-marcados') || '[]');
+
 localStorage.setItem("modo-noturno", modo_noturno);
 
 if (!window.localStorage.getItem('lista-versiculos')) {
@@ -187,7 +189,7 @@ window.fn.hideDialog = function (id) {
 var app = {
   // Application Constructor
   initialize: function() {
-    fn.showDialog('modal-aguarde');
+    // fn.showDialog('modal-aguarde');
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     document.addEventListener('admob.banner.events.LOAD_FAIL', function(event) {
       // alert(JSON.stringify(event))
@@ -1228,6 +1230,10 @@ var app = {
             'Mensagem enviada com sucesso!',
             {title: 'Sucesso'}
           );
+          $("#assunto").val('');
+          $("#email").val('');
+          $("#celular").val('');
+          $("#mensagem").val('');
         },
       });
     }
@@ -1772,6 +1778,135 @@ var app = {
         }
       }
     });
+  },
+  listaPlanoLeituraAnualMes: function(mes) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      // fn.showDialog('modal-aguarde');
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        if (data) {
+          var planoMes = data[mes];
+          var txtPlano = '';
+          var link = 'planoLeituraAnualConteudoTexto.html';
+          var versiculosPlano = '';
+          var cap_marcado = '<i style="color:#77DD77" class="fas fa-check-double"></i>';
+          var cap_desmarcado = '<i style="color:#DCDCDC" class="fas fa-check-double"></i>';
+          for (var i = 1; i < 32; i++) {
+            if (planoMes[i]) {
+              versiculosPlano =  planoMes[i];
+              var icon_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculosPlano) ? cap_marcado : cap_desmarcado;
+              txtPlano += '<ons-list-item class="showAd list-item list-item--material" onclick="fn.pushPage({\'id\': \''+link+'\', \'title\': \''+versiculosPlano+'||'+mes+'\'})" modifier="material">'+
+                '<div class="center list-item__center list-item--material__center" style="font-size: 15px;">Dia '+i+' - '+versiculosPlano+'</div>'+
+                '<div class="left list-item__left list-item--material__left">'+
+                icon_marcado_descarmado+
+                '</div>'+
+                '<div class="right list-item__right list-item--material__right">'+
+                   '<ons-icon icon="fa-angle-right" class="ons-icon fa-angle-right fa" modifier="material"></ons-icon>'+
+                '</div>'+
+             '</ons-list-item>';
+            }
+          }
+          $("#txtPlanoLeituraAnualConteudo").html(txtPlano);
+        }
+      }
+    };
+    xmlhttp.open("GET", "js/plano_leitura_anual.json", true);
+    xmlhttp.send();
+  },
+  buscaVersiculosPlanoLeituraAnualMes: function(versiculos) {
+    var dados = versiculos.split(' '); 
+    var livro = dados[0];
+    var capitulos = dados[1].split('-');
+    var plano_versiculo_marcado = '';
+    var text = '';
+    var background = '#f5f5f5';
+    var color = '1f1f21';
+    var modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
+    var fonte_versiculo = JSON.parse(localStorage.getItem('fonte-versiculo'));
+
+    if (modo_noturno) {
+      background = '#333';
+      color = 'fff';
+    }
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        if (data) {
+          for (var i = 0; i < data.length; i++) {            
+            if ((data[i]['abbrev']).toLowerCase() === livro.toLowerCase()) {
+              for (var j = parseInt(capitulos[0]); j <= parseInt(capitulos[(capitulos.length)-1]); j++) {
+                for (var k in (data[i]['chapters'][j-1])) {
+                  var texto = data[i]['chapters'][j-1][k];
+                  text += '<ons-list-item style="background:'+background+';color:#'+color+'">'+
+                                '<p style="font-size: '+fonte_versiculo+'px;text-align:justify;line-height: 35px;background:'+background+';color:#'+color+'" >'+
+                                  '<span style="font-weight:bold;">'+(parseInt(j))+':'+(parseInt(k)+1)+'</span>'+
+                                  '&nbsp;&nbsp;'+texto+ 
+                                '</p>'+
+                              '</ons-list-item>';
+                }
+              }
+            }
+          }
+
+          var classe_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculos) ? 'plano_desmarcar' : 'plano_marcar';
+          var nome_btn_marcado_descarmado = app.verificarVersiculosPlanoLeituraAnualConcluido(versiculos) ? 'DESMARCAR COMO CONCLUÍDO' : 'MARCAR COMO CONCLUÍDO';
+          text += '<br><br><section style="margin: 16px"><ons-button id="btn_marcado_descarmado" modifier="large" class="button-margin '+classe_marcado_descarmado+'"><span>'+nome_btn_marcado_descarmado+'</span></ons-button></section>';
+          $('#txtPlanoLeituraAnualConteudoTexto').html(text);
+
+          $( ".plano_marcar" ).click(function() {
+            app.marcarVersiculosPlanoLeituraAnualConcluido(versiculos)
+          });
+
+          $( ".plano_desmarcar" ).click(function() {
+            app.retirarVersiculosPlanoLeituraAnualConcluido(versiculos)
+          });
+        }
+      }
+    };
+    xmlhttp.open("GET", "js/"+versaoId+".json", true);
+    xmlhttp.send();
+  },
+  marcarVersiculosPlanoLeituraAnualConcluido: function(plano_versiculo_marcado) {
+    var planos_marcados = JSON.parse(localStorage.getItem('planos-marcados') || '[]');
+    planos_marcados.push(plano_versiculo_marcado);
+    localStorage.setItem("planos-marcados", JSON.stringify(planos_marcados));
+    ons.notification.toast('Marcado como concluído.', { buttonLabel: 'Ok', timeout: 1500 });
+    $( "#btn_marcado_descarmado" ).css("display","none");
+
+  },
+  verificarVersiculosPlanoLeituraAnualConcluido: function(versiculos) {
+    var retorno = false;
+    var array = JSON.parse(localStorage.getItem('planos-marcados'));
+    if (array) {
+      for(var k=0; k < array.length; k++) {
+        if (array[k]) {
+          if((array[k].toLowerCase() == versiculos.toLowerCase())) {
+            retorno = true;
+          }
+        }
+      }   
+    }
+    return retorno;
+  },
+  retirarVersiculosPlanoLeituraAnualConcluido: function(versiculos) {
+    var array = JSON.parse(localStorage.getItem('planos-marcados'));
+    if (array) {
+      for(var i=0; i<array.length; i++) {
+        if (array[i]) {
+          if((array[i].toLowerCase() == versiculos.toLowerCase())) {
+            array.splice(i, 1);
+          }
+        }
+      }
+      var planos_marcados = JSON.parse(localStorage.getItem('planos-marcados') || '[]');
+      localStorage.removeItem(planos_marcados);
+      localStorage.setItem("planos-marcados", JSON.stringify(array));
+      ons.notification.toast('Desmarcado como concluído.', { buttonLabel: 'Ok', timeout: 1500 });
+      $( "#btn_marcado_descarmado" ).css("display","none");
+
+    }
   },
 };
 app.initialize();

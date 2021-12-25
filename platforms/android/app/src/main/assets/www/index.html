@@ -21,7 +21,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
-    <title>INNOVATE SOFT</title>
+    <title>Cristão Na Rede</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 <template id="tabbar.html">
   <ons-page id="tabbar-page">
     <ons-toolbar id="tabbar_">
-        <div class="center"><center>Bíblia Sagrada</center></div>
+        <div class="center"><center id="tituloApp">Bíblia Sagrada</center></div>
       <div class="left">
         <ons-toolbar-button onclick="fn.toggleMenu()">
           <ons-icon style="color: #f5f5f5" icon="ion-navicon, material:md-menu"></ons-icon>
@@ -47,10 +47,12 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Innovate Soft" page="home.html" active></ons-tab>
+        <ons-tab id="versaoApp" label="Cristão Na Rede" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
+      $("#tituloApp").html(config.titulo);
+      $("#versaoApp").attr('label',config.versao);
       ons.getScriptPage().addEventListener('prechange', function(event) {
         if (event.target.matches('#appTabbar')) {
               event.currentTarget.querySelector('#tabbar_ .center center').innerHTML = config.titulo;
@@ -260,7 +262,7 @@
       </ons-row>
 
       <ons-card onclick="fn.pushPage({'id': 'faleConosco.html', 'title': 'Fale Conosco'})" style="padding: 1px;text-shadow:-1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, 1px 0px 0px #000;background-color: #333;">
-        <div class="title titulo_menu"><i class="fas fa-headset"></i><br>Fale com a Innovate Soft</div>
+        <div class="title titulo_menu"><i class="fas fa-headset"></i><br>Fale Conosco</div>
       </ons-card>
     </section>
     <section style="padding: 8px;display: none;" id="btn_remover_anuncio">
@@ -432,6 +434,7 @@
                   localStorage.removeItem("lista-versiculos");
                   localStorage.removeItem("lista-notificacoes");
                   localStorage.removeItem("lista-capitulos");
+                  localStorage.removeItem("planos-marcados");
                 }
               }
             })
@@ -661,6 +664,8 @@
           <option value="informacao">Informação</option>
           <option value="duvidas">Dúvidas</option>
           <option value="sugestoes">Sugestões</option>
+          <option value="oracao">Pedir Oração</option>
+          <option value="testamento">Testemunho</option>
           <option value="outro">Outro</option>
         </ons-select>
       </p>
@@ -676,7 +681,6 @@
     </div>
     <script>
       ons.getScriptPage().onInit = function () {
-        app.registraAcesso('aa/faleConosco.html');
         var token_ = window.localStorage.getItem("playerID") ? window.localStorage.getItem("playerID") : '';
         $("#token").val(token_);
 
@@ -974,6 +978,10 @@
       </ons-card>
       <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'novoTestamento.html', 'title': 'Novo Testamento'})">
           <div class="title" style="color: #F5F5F5;">Novo Testamento</div>
+      </ons-card>
+
+      <ons-card style="background-color: #333;" onclick="fn.pushPage({'id': 'planoLeitura.html', 'title': 'Plano de Leitura'})">
+          <div class="title" style="color: #F5F5F5;">Plano de Leitura</div>
       </ons-card>
     </div>
 
@@ -3174,7 +3182,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            //admob.interstitial.show();
+            admob.interstitial.show();
           }
           this.querySelector('#orientacaoConsolo_ div.center').textContent = 'Orientação e Consolo';
 
@@ -3236,7 +3244,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            //admob.interstitial.show();
+            admob.interstitial.show();
           }
           fn.showDialog('modal-aguarde');
           var dados = this.data.title.split('||'); 
@@ -3270,6 +3278,191 @@
     </style>
   </ons-page>
 </template>
+
+<template id="planoLeitura.html">
+    <ons-page id="planoLeitura">
+        <ons-toolbar id="planoLeitura_">
+            <div class="left">
+                <ons-back-button>Plano de Leitura</ons-back-button>
+            </div>
+            <div class="center"></div>
+        </ons-toolbar>
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnual.html', 'title': 'Plano de Leitura Anual'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Plano de Leitura Anual</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>                  
+    </ons-list>
+    <script>
+        if (window.localStorage.getItem("versao_pro") === 'NAO') {
+          admob.interstitial.show();
+        }
+        ons.getScriptPage().onInit = function () {
+          this.querySelector('#planoLeitura_ div.center').textContent = 'Plano de Leitura';
+        }
+    </script>
+    <style>        
+        .button-margin {
+            margin: 6px 0;
+          }
+          .card__title,
+          .card--material__title {
+            font-size: 20px;
+          }
+    </style>
+    </ons-page>
+</template>
+
+<template id="planoLeituraAnual.html">
+    <ons-page id="planoLeituraAnual">
+        <ons-toolbar id="planoLeituraAnual_">
+            <div class="left">
+                <ons-back-button>Plano de Leitura</ons-back-button>
+            </div>
+            <div class="center"></div>
+        </ons-toolbar>
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Janeiro'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Janeiro</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Fevereiro'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Fevereiro</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Março'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Março</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Abril'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Abril</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Maio'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Maio</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Junho'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Junho</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Julho'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Julho</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Agosto'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Agosto</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Setembro'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Setembro</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Outubro'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Outubro</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Novembro'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Novembro</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>     
+        <ons-list-item class="showAd" onclick="fn.pushPage({'id': 'planoLeituraAnualConteudo.html', 'title': 'Plano de Leitura Anual||Dezembro'})">
+            <div class="left"></div>
+            <div class="center" style="font-size: 20px;">Dezembro</div>
+            <div class="right"><ons-icon icon="fa-angle-right"></ons-icon></div>
+        </ons-list-item>                  
+    </ons-list>
+    <script>
+        ons.getScriptPage().onInit = function () {
+          this.querySelector('#planoLeituraAnual_ div.center').textContent = 'Plano de Leitura Anual';
+        }
+    </script>
+    <style>        
+        .button-margin {
+            margin: 6px 0;
+          }
+          .card__title,
+          .card--material__title {
+            font-size: 20px;
+          }
+    </style>
+    </ons-page>
+</template>
+
+<template id="planoLeituraAnualConteudo.html">
+    <ons-page id="planoLeituraAnualConteudo">
+        <ons-toolbar id="planoLeituraAnualConteudo_">
+            <div class="left">
+                <ons-back-button>Plano de Leitura Anual Conteúdo</ons-back-button>
+            </div>
+            <div class="center"></div>
+        </ons-toolbar>
+        <div id="txtPlanoLeituraAnualConteudo"></div>                   
+    </ons-list>
+    <script>
+        ons.getScriptPage().onInit = function () {
+          var dados = this.data.title.split('||'); 
+          this.querySelector('#planoLeituraAnualConteudo_ div.center').textContent = dados[1]+' | Plano de Leitura Anual';
+          app.listaPlanoLeituraAnualMes(dados[1]);
+        }
+    </script>
+    <style>        
+        .button-margin {
+            margin: 6px 0;
+          }
+          .card__title,
+          .card--material__title {
+            font-size: 20px;
+          }
+    </style>
+    </ons-page>
+</template>
+
+<template id="planoLeituraAnualConteudoTexto.html">
+    <ons-page id="planoLeituraAnualConteudoTexto">
+        <ons-toolbar id="planoLeituraAnualConteudoTexto_">
+            <div class="left">
+                <ons-back-button id="back_planoLeituraAnualConteudo">Plano de Leitura Anual Texto</ons-back-button>
+            </div>
+            <div class="center"></div>
+        </ons-toolbar>
+        <div id="txtPlanoLeituraAnualConteudoTexto"></div>
+    </ons-list>
+    <script>
+        ons.getScriptPage().onInit = function () {
+          var dados = this.data.title.split('||'); 
+
+          var cap = dados[0];
+          var mes = dados[1];
+          this.querySelector('#planoLeituraAnualConteudoTexto_ div.center').textContent = cap+' | Plano de Leitura Anual';
+          app.buscaVersiculosPlanoLeituraAnualMes(cap);
+          $( "#back_planoLeituraAnualConteudo" ).click(function() {
+            app.listaPlanoLeituraAnualMes(mes);
+          });
+        }
+    </script>
+    <style>        
+        .button-margin {
+            margin: 6px 0;
+          }
+          .card__title,
+          .card--material__title {
+            font-size: 20px;
+          }
+    </style>
+    </ons-page>
+</template>
+
 <script src="js/index.js"></script>
 
 </body>
