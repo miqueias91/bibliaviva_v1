@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-3/c5e88eb3e4729c82bd228336201423af/transformed/jetified-play-services-base-11.0.4/res/values-gu/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "283,389,587,710,820,1017,1137,1262,1469,1575,1770,1893,2095,2271,2358,2450",
-                        "endColumns": "105,197,122,109,196,119,124,206,105,194,122,201,175,86,91,106",
-                        "endOffsets": "388,586,709,819,1016,1136,1261,1468,1574,1769,1892,2094,2270,2357,2449,2556"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,37,38,39,40,41,42,43,44,45",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2788,2898,3096,3223,3337,3534,3658,3993,4200,4310,4505,4632,4834,5014,5105,5201",
-                        "endColumns": "109,197,126,113,196,123,128,206,109,194,126,201,179,90,95,110",
-                        "endOffsets": "2893,3091,3218,3332,3529,3653,3782,4195,4305,4500,4627,4829,5009,5100,5196,5307"
-                    }
-                },
-                {
-                    "source": "/home/miqueias/.gradle/caches/transforms-3/98450aa13483f2948809bc75b5c3bc1f/transformed/jetified-play-services-basement-11.0.4/res/values-gu/values.xml",
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/d7d05b84e4a7e733524f5495054e17ee/transformed/jetified-play-services-basement-11.0.4/res/values-gu/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "/home/miqueias/.gradle/caches/transforms-3/ecef7e4b574b33566e0afb2bbd291280/transformed/jetified-play-services-ads-11.0.4/res/values-gu/values.xml",
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/94b78ba65fd29256210b40c33a70c62f/transformed/jetified-play-services-base-11.0.4/res/values-gu/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "283,389,587,710,820,1017,1137,1262,1469,1575,1770,1893,2095,2271,2358,2450",
+                        "endColumns": "105,197,122,109,196,119,124,206,105,194,122,201,175,86,91,106",
+                        "endOffsets": "388,586,709,819,1016,1136,1261,1468,1574,1769,1892,2094,2270,2357,2449,2556"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,37,38,39,40,41,42,43,44,45",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2788,2898,3096,3223,3337,3534,3658,3993,4200,4310,4505,4632,4834,5014,5105,5201",
+                        "endColumns": "109,197,126,113,196,123,128,206,109,194,126,201,179,90,95,110",
+                        "endOffsets": "2893,3091,3218,3332,3529,3653,3782,4195,4305,4500,4627,4829,5009,5100,5196,5307"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-3/e6013e543f98ff02d13ba2dabb8b9edf/transformed/jetified-play-services-ads-11.0.4/res/values-gu/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9",
                         "startColumns": "0,0,0,0,0,0",
