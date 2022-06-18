@@ -13,7 +13,7 @@
         errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml"
-            line="23"
+            line="24"
             column="57"/>
     </issue>
 
@@ -29,7 +29,7 @@
         errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/AndroidManifest.xml"
-            line="24"
+            line="25"
             column="33"/>
     </issue>
 

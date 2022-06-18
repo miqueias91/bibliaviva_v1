@@ -7,15 +7,16 @@
     "files": {}
   },
   "installed_plugins": {
+    "admob-plus-cordova": {
+      "APP_ID_ANDROID": "ca-app-pub-7091486462236476~8144821046",
+      "PLAY_SERVICES_VERSION": "20.4.0",
+      "PACKAGE_NAME": "com.phonegap.bibliaviva"
+    },
     "cordova-admob-sdk": {
       "PLAY_SERVICES_VERSION": "11.0.4",
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
     "cordova-clipboard": {
-      "PACKAGE_NAME": "com.phonegap.bibliaviva"
-    },
-    "cordova-plugin-admob-free": {
-      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046",
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
     "cordova-plugin-androidx-adapter": {

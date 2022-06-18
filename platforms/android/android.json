@@ -5,15 +5,79 @@
   },
   "config_munge": {
     "files": {
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:excludeFromRecents=\"true\" android:name=\"com.google.android.gms.ads.AdActivity\" android:noHistory=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-7091486462236476~8144821046\" />",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT\" android:value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
+              "count": 1
+            },
+            {
+              "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.phonegap.bibliaviva\" /></intent-filter></receiver>",
+              "count": 1
+            }
+          ],
+          "/*/application": [
+            {
+              "xml": "<receiver android:enabled=\"true\" android:name=\"nl.xservices.plugins.ShareChooserPendingIntent\"><intent-filter><action android:name=\"android.intent.action.SEND\" /></intent-filter></receiver>",
+              "count": 1
+            }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<permission android:name=\"com.phonegap.bibliaviva.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"com.phonegap.bibliaviva.permission.RECEIVE_ADM_MESSAGE\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
       "res/xml/config.xml": {
         "parents": {
           "/*": [
             {
-              "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
+              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"admob.plus.cordova.AdMob\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"name.ratson.cordova.admob.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
               "count": 1
             },
             {
@@ -46,74 +110,6 @@
             },
             {
               "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "AndroidManifest.xml": {
-        "parents": {
-          "/manifest/application": [
-            {
-              "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
-              "count": 1
-            },
-            {
-              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-7091486462236476~8144821046\" />",
-              "count": 1
-            },
-            {
-              "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
-              "count": 1
-            },
-            {
-              "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
-              "count": 1
-            },
-            {
-              "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
-              "count": 1
-            },
-            {
-              "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.phonegap.bibliaviva\" /></intent-filter></receiver>",
-              "count": 1
-            }
-          ],
-          "/*": [
-            {
-              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
-              "count": 1
-            }
-          ],
-          "/*/application": [
-            {
-              "xml": "<receiver android:enabled=\"true\" android:name=\"nl.xservices.plugins.ShareChooserPendingIntent\"><intent-filter><action android:name=\"android.intent.action.SEND\" /></intent-filter></receiver>",
-              "count": 1
-            }
-          ],
-          "/manifest": [
-            {
-              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<permission android:name=\"com.phonegap.bibliaviva.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"com.phonegap.bibliaviva.permission.RECEIVE_ADM_MESSAGE\" />",
               "count": 1
             }
           ]
@@ -160,18 +156,16 @@
     }
   },
   "installed_plugins": {
+    "admob-plus-cordova": {
+      "APP_ID_ANDROID": "ca-app-pub-7091486462236476~8144821046",
+      "PLAY_SERVICES_VERSION": "20.4.0",
+      "PACKAGE_NAME": "com.phonegap.bibliaviva"
+    },
     "cordova-admob-sdk": {
       "PLAY_SERVICES_VERSION": "11.0.4",
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
     "cordova-clipboard": {
-      "PACKAGE_NAME": "com.phonegap.bibliaviva"
-    },
-    "cordova-promise-polyfill": {
-      "PACKAGE_NAME": "com.phonegap.bibliaviva"
-    },
-    "cordova-plugin-admob-free": {
-      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~8144821046",
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
     "cordova-plugin-androidx-adapter": {
@@ -205,6 +199,9 @@
       "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.phonegap.bibliaviva"
+    },
     "cordova-support-google-services": {
       "PACKAGE_NAME": "com.phonegap.bibliaviva"
     },
@@ -222,32 +219,19 @@
   "dependent_plugins": {},
   "modules": [
     {
+      "id": "admob-plus-cordova.AdMob",
+      "file": "plugins/admob-plus-cordova/www/admob.js",
+      "pluginId": "admob-plus-cordova",
+      "clobbers": [
+        "admob"
+      ]
+    },
+    {
       "id": "cordova-clipboard.Clipboard",
       "file": "plugins/cordova-clipboard/www/clipboard.js",
       "pluginId": "cordova-clipboard",
       "clobbers": [
         "cordova.plugins.clipboard"
-      ]
-    },
-    {
-      "id": "cordova-promise-polyfill.Promise",
-      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
-      "pluginId": "cordova-promise-polyfill",
-      "runs": true
-    },
-    {
-      "id": "cordova-promise-polyfill.promise.min",
-      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
-      "pluginId": "cordova-promise-polyfill"
-    },
-    {
-      "id": "cordova-plugin-admob-free.AdMob",
-      "file": "plugins/cordova-plugin-admob-free/www/admob.js",
-      "pluginId": "cordova-plugin-admob-free",
-      "clobbers": [
-        "admob",
-        "AdMob",
-        "plugins.AdMob"
       ]
     },
     {
@@ -311,6 +295,17 @@
       "clobbers": [
         "window.plugins.socialsharing"
       ]
+    },
+    {
+      "id": "cordova-promise-polyfill.Promise",
+      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+      "pluginId": "cordova-promise-polyfill",
+      "runs": true
+    },
+    {
+      "id": "cordova-promise-polyfill.promise.min",
+      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+      "pluginId": "cordova-promise-polyfill"
     },
     {
       "id": "cordova.plugins.diagnostic.Diagnostic",
@@ -410,10 +405,9 @@
     }
   ],
   "plugin_metadata": {
+    "admob-plus-cordova": "1.27.0",
     "cordova-admob-sdk": "0.24.1",
     "cordova-clipboard": "1.3.0",
-    "cordova-promise-polyfill": "0.0.2",
-    "cordova-plugin-admob-free": "0.27.0",
     "cordova-plugin-androidx-adapter": "1.1.3",
     "cordova-plugin-codeplay-facebookads-free": "0.0.1",
     "cordova-plugin-console": "1.0.7",
@@ -424,6 +418,7 @@
     "cordova-plugin-whitelist": "1.2.2",
     "es6-promise-plugin": "4.2.2",
     "cordova-plugin-x-socialsharing": "5.6.4",
+    "cordova-promise-polyfill": "0.0.2",
     "cordova-support-google-services": "1.3.2",
     "cordova.plugins.diagnostic": "4.0.12",
     "onesignal-cordova-plugin": "2.4.6",

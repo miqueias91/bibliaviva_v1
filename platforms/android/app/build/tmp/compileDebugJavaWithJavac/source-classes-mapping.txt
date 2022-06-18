@@ -1,3 +1,7 @@
+admob/plus/cordova/Generated.java
+ admob.plus.cordova.Generated
+ admob.plus.cordova.Generated$Actions
+ admob.plus.cordova.Generated$Events
 org/apache/cordova/splashscreen/SplashScreen.java
  org.apache.cordova.splashscreen.SplashScreen
  org.apache.cordova.splashscreen.SplashScreen$1
@@ -10,6 +14,9 @@ org/apache/cordova/splashscreen/SplashScreen.java
  org.apache.cordova.splashscreen.SplashScreen$6
  org.apache.cordova.splashscreen.SplashScreen$6$1
  org.apache.cordova.splashscreen.SplashScreen$7
+admob/plus/core/Helper.java
+ admob.plus.core.Helper
+ admob.plus.core.Helper$Adapter
 cordova/plugin/codeplay/facebookads/free/codeplayfacebookads/codeplayfacebookads.java
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads$1
@@ -19,6 +26,15 @@ cordova/plugin/codeplay/facebookads/free/codeplayfacebookads/codeplayfacebookads
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads$5
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads$6
  cordova.plugin.codeplay.facebookads.free.codeplayfacebookads$7
+admob/plus/cordova/AdMob.java
+ admob.plus.cordova.AdMob
+ admob.plus.cordova.AdMob$1
+ admob.plus.cordova.AdMob$2
+ admob.plus.cordova.AdMob$3
+admob/plus/cordova/ads/AppOpen.java
+ admob.plus.cordova.ads.AppOpen
+ admob.plus.cordova.ads.AppOpen$1
+ admob.plus.cordova.ads.AppOpen$1$1
 cordova/plugins/Diagnostic_Location.java
  cordova.plugins.Diagnostic_Location
  cordova.plugins.Diagnostic_Location$1
@@ -28,13 +44,6 @@ cordova/plugins/Diagnostic.java
  cordova.plugins.Diagnostic$2
 cordova/plugins/Diagnostic_Wifi.java
  cordova.plugins.Diagnostic_Wifi
-name/ratson/cordova/admob/interstitial/InterstitialExecutor.java
- name.ratson.cordova.admob.interstitial.InterstitialExecutor
- name.ratson.cordova.admob.interstitial.InterstitialExecutor$1
- name.ratson.cordova.admob.interstitial.InterstitialExecutor$2
- name.ratson.cordova.admob.interstitial.InterstitialExecutor$3
- name.ratson.cordova.admob.interstitial.InterstitialExecutor$4
- name.ratson.cordova.admob.interstitial.InterstitialExecutor$5
 nl/xservices/plugins/Insomnia.java
  nl.xservices.plugins.Insomnia
  nl.xservices.plugins.Insomnia$1
@@ -65,8 +74,16 @@ org/apache/cordova/statusbar/StatusBar.java
  org.apache.cordova.statusbar.StatusBar$2
  org.apache.cordova.statusbar.StatusBar$3
  org.apache.cordova.statusbar.StatusBar$4
-name/ratson/cordova/admob/AdMobConfig.java
- name.ratson.cordova.admob.AdMobConfig
+admob/plus/cordova/ads/Interstitial.java
+ admob.plus.cordova.ads.Interstitial
+ admob.plus.cordova.ads.Interstitial$1
+ admob.plus.cordova.ads.Interstitial$1$1
+admob/plus/cordova/ads/RewardedInterstitial.java
+ admob.plus.cordova.ads.RewardedInterstitial
+ admob.plus.cordova.ads.RewardedInterstitial$1
+ admob.plus.cordova.ads.RewardedInterstitial$1$1
+admob/plus/core/Context.java
+ admob.plus.core.Context
 com/phonegap/bibliaviva/BuildConfig.java
  com.phonegap.bibliaviva.BuildConfig
 nl/xservices/plugins/FileProvider.java
@@ -99,35 +116,45 @@ com/plugin/gcm/OneSignalPush.java
  com.plugin.gcm.OneSignalPush$9
  com.plugin.gcm.OneSignalPush$CordovaNotificationOpenedHandler
  com.plugin.gcm.OneSignalPush$CordovaNotificationReceivedHandler
+admob/plus/cordova/ads/Banner.java
+ admob.plus.cordova.ads.Banner
+ admob.plus.cordova.ads.Banner$1
+ admob.plus.cordova.ads.Banner$2
+ admob.plus.cordova.ads.Banner$3
+ admob.plus.cordova.ads.Banner$3$1
+ admob.plus.cordova.ads.Banner$4
+ admob.plus.cordova.ads.Banner$AdSizeType
 org/apache/cordova/whitelist/WhitelistPlugin.java
  org.apache.cordova.whitelist.WhitelistPlugin
  org.apache.cordova.whitelist.WhitelistPlugin$1
  org.apache.cordova.whitelist.WhitelistPlugin$CustomConfigXmlParser
-name/ratson/cordova/admob/AdMob.java
- name.ratson.cordova.admob.AdMob
-name/ratson/cordova/admob/banner/BannerExecutor.java
- name.ratson.cordova.admob.banner.BannerExecutor
- name.ratson.cordova.admob.banner.BannerExecutor$1
- name.ratson.cordova.admob.banner.BannerExecutor$2
- name.ratson.cordova.admob.banner.BannerExecutor$3
- name.ratson.cordova.admob.banner.BannerExecutor$4
-name/ratson/cordova/admob/AbstractExecutor.java
- name.ratson.cordova.admob.AbstractExecutor
-name/ratson/cordova/admob/banner/BannerListener.java
- name.ratson.cordova.admob.banner.BannerListener
+admob/plus/core/Ad.java
+ admob.plus.core.Ad
+ admob.plus.core.Ad$1
+ admob.plus.core.Ad$2
+ admob.plus.core.Ad$2$1
+ admob.plus.core.Ad$3
+admob/plus/cordova/ExecuteContext.java
+ admob.plus.cordova.ExecuteContext
 com/phonegap/bibliaviva/MainActivity.java
  com.phonegap.bibliaviva.MainActivity
-name/ratson/cordova/admob/Actions.java
- name.ratson.cordova.admob.Actions
+admob/plus/core/GenericAd.java
+ admob.plus.core.GenericAd
 cordova/plugins/Diagnostic_Bluetooth.java
  cordova.plugins.Diagnostic_Bluetooth
  cordova.plugins.Diagnostic_Bluetooth$1
 com/verso/cordova/clipboard/Clipboard.java
  com.verso.cordova.clipboard.Clipboard
+admob/plus/cordova/ads/Rewarded.java
+ admob.plus.cordova.ads.Rewarded
+ admob.plus.cordova.ads.Rewarded$1
+ admob.plus.cordova.ads.Rewarded$1$1
 cordova/plugins/Diagnostic_External_Storage.java
  cordova.plugins.Diagnostic_External_Storage
-name/ratson/cordova/admob/interstitial/InterstitialListener.java
- name.ratson.cordova.admob.interstitial.InterstitialListener
+admob/plus/cordova/ads/Native.java
+ admob.plus.cordova.ads.Native
+ admob.plus.cordova.ads.Native$1
+ admob.plus.cordova.ads.Native$ViewProvider
 cordova/plugins/Diagnostic_Camera.java
  cordova.plugins.Diagnostic_Camera
 cordova/plugins/Diagnostic_Notifications.java
@@ -135,12 +162,5 @@ cordova/plugins/Diagnostic_Notifications.java
 cordova/plugins/Diagnostic_NFC.java
  cordova.plugins.Diagnostic_NFC
  cordova.plugins.Diagnostic_NFC$1
-name/ratson/cordova/admob/rewardvideo/RewardVideoListener.java
- name.ratson.cordova.admob.rewardvideo.RewardVideoListener
-name/ratson/cordova/admob/CordovaEventBuilder.java
- name.ratson.cordova.admob.CordovaEventBuilder
-name/ratson/cordova/admob/rewardvideo/RewardVideoExecutor.java
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$1
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$2
- name.ratson.cordova.admob.rewardvideo.RewardVideoExecutor$3
+admob/plus/cordova/ads/AdBase.java
+ admob.plus.cordova.ads.AdBase

@@ -72,12 +72,12 @@
         "source": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/res/drawable-mdpi/ic_stat_onesignal_default.png"
     },
     {
-        "merged": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-land-xxxhdpi_screen.png.flat",
-        "source": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png"
-    },
-    {
         "merged": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_stat_onesignal_default.png.flat",
         "source": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/res/drawable-hdpi/ic_stat_onesignal_default.png"
+    },
+    {
+        "merged": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/res/merged/release/drawable-land-xxxhdpi_screen.png.flat",
+        "source": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png"
     },
     {
         "merged": "/var/www/html/biblia/bibliaviva_v1/platforms/android/app/build/intermediates/res/merged/release/xml_sharing_paths.xml.flat",

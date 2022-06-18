@@ -91,13 +91,7 @@ var lista_score = JSON.parse(localStorage.getItem('lista-score') || '[]');
 function maxArray(array) {
     return Math.max.apply(Math, array);
 };
-var admobid = {}
-if (/(android)/i.test(navigator.userAgent)) {
-  admobid = {
-    banner: config.banner,
-    interstitial: config.interstitial,
-  }
-}
+
 window.fn = {};
 $("#existeProximoCapitulo").val(0)
 var id = '';
@@ -107,7 +101,6 @@ var velocidade = 0;
 var tamanho = 826;
 var pausar = 0;
 var rolagem = 0;
-
 var ultimo_livro_lido = localStorage.getItem('ultimo_livro_lido');
 var ultimo_livro_lido_abr = localStorage.getItem('ultimo_livro_lido_abr');
 var ultimo_capitulo_lido = localStorage.getItem('ultimo_capitulo_lido');
@@ -132,7 +125,9 @@ if (window.localStorage.getItem('userId')) {
   localStorage.removeItem('userId');
 }
 
-window.localStorage.setItem("versao_pro", 'NAO');
+if (!window.localStorage.getItem('versao_pro')) {
+  window.localStorage.setItem("versao_pro", 'NAO');
+}
 
 if (!window.localStorage.getItem('lista-favorito-hinario')) {
   localStorage.setItem("lista-favorito-hinario", '[]'); 
@@ -185,38 +180,57 @@ var showTemplateDialog = function() {
 window.fn.hideDialog = function (id) {
   document.getElementById(id).hide();
 };
-
+let banner;
+let interstitial;
+async function anuncioAdmobBanner() {
+  await admob.start();
+  banner = new admob.BannerAd({
+    adUnitId: config.banner,
+    position: 'bottom',
+  });
+  banner.on('impression', async (evt) => {
+    // await banner.show()
+    await banner.hide()
+  });
+  if (window.localStorage.getItem("versao_pro") === 'NAO' ) {    
+    await banner.show();
+  }
+  else if (window.localStorage.getItem("versao_pro") != 'NAO') {
+    await banner.hide();
+  }
+}
+async function anuncioAdmobInterstitial() {
+  await admob.start();
+  interstitial = new admob.InterstitialAd({
+    adUnitId: config.interstitial,
+  })
+  interstitial.on('load', (evt) => {
+  })
+  await interstitial.load()
+  await interstitial.show()
+}
 var app = {
     // Application Constructor
     initialize: function() {
         // fn.showDialog('modal-aguarde');
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-        document.addEventListener('admob.banner.events.LOAD_FAIL', function(event) {
-          // alert(JSON.stringify(event))
-        });
-        document.addEventListener('admob.interstitial.events.LOAD_FAIL', function(event) {
-          // alert(JSON.stringify(event))
-        });
-        document.addEventListener('admob.interstitial.events.LOAD', function(event) {
-          // alert(JSON.stringify(event))
-          document.getElementsByClassName('showAd').disabled = false
-        });
-        document.addEventListener('admob.interstitial.events.CLOSE', function(event) {
-          // alert(JSON.stringify(event))
-          admob.interstitial.prepare()
-        });
     },
-    onDeviceReady: function() {    
-        this.receivedEvent('deviceready');
+    onDeviceReady: function() {
+      anuncioAdmobBanner();
+      this.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        this.carregaPalavraDia();
+    receivedEvent: function(id) {  
+        window.plugins.insomnia.keepAwake();  
+        if (window.localStorage.getItem('playerID') && window.localStorage.getItem('uid')) {
+          this.cadastraUser();
+        }
         this.init();
-        this.carregaQuiz();
         this.firebase();
         this.oneSignal();
         this.getIds();
+        this.carregaPalavraDia();
+        this.carregaQuiz();
     },
     init: function() {
         var timeoutID = 0;
@@ -883,7 +897,7 @@ buscaHinario: function(id) {
     if (playerID && uid) {
       $.ajax({
         url: "https://www.innovatesoft.com.br/webservice/app/cadastraUser.php",
-        dataType: 'html',
+        dataType: 'json',
         type: 'POST',
         data: {
           'userId': playerID,
@@ -895,10 +909,35 @@ buscaHinario: function(id) {
           'versao': config.versao,
         },
         error: function(e) {
-          app.buscaDadosUsuario();
+          app.buscaPalavraOrientacaoTopico();
+          app.buscaNotificacoes();
         },
         success: function(a) {
-          app.buscaDadosUsuario();
+          if (a) {
+            window.localStorage.setItem("id_user", a['id_user']);
+            window.localStorage.setItem("nome", a['nome']);
+            window.localStorage.setItem("usuario", a['usuario']);
+            window.localStorage.setItem("email", a['email']);
+            window.localStorage.setItem("celular", a['celular']);
+            window.localStorage.setItem("religiao", a['religiao']);
+            window.localStorage.setItem("conta", a['conta']);
+            if (a['final_versao_pro'] == null) {
+              a['final_versao_pro'] = 'NAO';
+              window.localStorage.setItem("versao_pro", a['final_versao_pro']);
+              anuncioAdmobBanner();
+              $("#btn_remover_anuncio").css("display","");
+            }
+            else {
+              window.localStorage.setItem("versao_pro", a['final_versao_pro']);
+              anuncioAdmobBanner();
+            }
+            if (a['conta'] == 'google') {
+              $("#tela_home").css("display","");
+              $("#tela_login_google").css("display","none");
+            }
+          }
+          app.buscaPalavraOrientacaoTopico();
+          app.buscaNotificacoes();
         },
       });
     }
@@ -1202,79 +1241,6 @@ buscaHinario: function(id) {
           return true;
         }
         return false;
-    },
-    buscaDadosUsuario: function() {
-        var uid = window.localStorage.getItem('uid');
-        var playerID = window.localStorage.getItem('playerID');
-
-        if (uid) {
-          $.ajax({
-            url: "https://www.innovatesoft.com.br/webservice/app/buscaDadosUsuario.php",
-            dataType: 'json',
-            type: 'POST',
-            data: {
-              'uid': uid,
-              'userId': playerID,
-            },
-            error: function(e) {
-              var final_versao_pro = this.dateTime();
-              window.localStorage.setItem("versao_pro", final_versao_pro);
-              app.admob();
-              app.buscaPalavraOrientacaoTopico();
-              app.buscaNotificacoes();
-            },
-            success: function(a) {
-              if (a) {
-                window.localStorage.setItem("id_user", a['id_user']);
-                window.localStorage.setItem("nome", a['nome']);
-                window.localStorage.setItem("usuario", a['usuario']);
-                window.localStorage.setItem("email", a['email']);
-                window.localStorage.setItem("celular", a['celular']);
-                window.localStorage.setItem("religiao", a['religiao']);
-                window.localStorage.setItem("conta", a['conta']);
-                if (a['final_versao_pro'] == null) {
-                  a['final_versao_pro'] = 'NAO';
-                  $("#btn_remover_anuncio").css("display","");
-                }
-                if (a['conta'] == 'google') {
-                  $("#tela_home").css("display","");
-                  $("#tela_login_google").css("display","none");
-                }
-                window.localStorage.setItem("versao_pro", a['final_versao_pro']);
-              }
-              app.admob();
-              app.buscaPalavraOrientacaoTopico();
-              app.buscaNotificacoes();
-            },
-          });
-        }
-    },
-    admob: function(){
-        window.plugins.insomnia.keepAwake();
-        admob.banner.config({ 
-          id: admobid.banner, 
-          isTesting: false, 
-          autoShow: true, 
-        })
-
-        if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          admob.banner.prepare()
-        }
-        
-        admob.interstitial.config({
-          id: admobid.interstitial,
-          isTesting: false,
-          autoShow: false,
-        })
-
-        if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          admob.interstitial.prepare()
-        }
-
-        document.getElementsByClassName('showAd').disabled = true
-        document.getElementsByClassName('showAd').onclick = function() {
-          admob.interstitial.show()
-        }
     },
     firebase: function(){
         var firebaseConfig = {

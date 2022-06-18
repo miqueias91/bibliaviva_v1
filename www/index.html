@@ -327,8 +327,8 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
-          }
+          anuncioAdmobInterstitial();
+        }
         $("#textoVersiculo").html('');
         this.querySelector('#versiculosMarcados_ div.center').textContent = 'Versículos Marcados';
         var lista_marcadores = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
@@ -441,7 +441,8 @@
           };
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
           $("#modo_noturno").attr("checked",modo_noturno);
@@ -809,7 +810,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          admob.interstitial.show();
+          anuncioAdmobInterstitial();
         }
         $("#textoVersiculo").html('');
         this.querySelector('#palavraDia_ div.center').textContent = 'Palavra do Dia';
@@ -862,7 +863,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           $("#textoCapitulosLidos").html('');
           this.querySelector('#capitulosLidos_ div.center').textContent = 'Capítulos Lidos';
@@ -1272,7 +1274,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           fn.showDialog('modal-aguarde');
           app.listaHinario();
@@ -1399,8 +1402,9 @@
         <script>
           ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
-          }
+              anuncioAdmobInterstitial();
+  
+            }
             var dados = this.data.title.split('||'); 
             this.querySelector('#conteudoLivro_ div.center').textContent = dados[1];
             $("#conteudoLivro").html('');
@@ -1506,6 +1510,9 @@
 
         <script>
           ons.getScriptPage().onInit = function () {
+            if (window.localStorage.getItem("versao_pro") === 'NAO') {
+              // anuncioAdmobInterstitial();
+            }
             var dados = this.data.title.split('||'); 
             var ultimoCap = dados[2];
             this.querySelector('#textoLivro_ div.center').textContent = dados[1]+' '+dados[3];
@@ -1752,7 +1759,8 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           var dados = this.data.title.split('||'); 
           this.querySelector('#conteudoHarpa_ div.center').textContent = dados[0]+' - '+dados[1];
@@ -1797,7 +1805,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           fn.showDialog('modal-aguarde');
           app.listaFavoritoHinario();
@@ -1846,7 +1855,8 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
         this.querySelector('#notificacoes_ div.center').textContent = 'Notificações';
 
@@ -2136,7 +2146,8 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+          anuncioAdmobInterstitial();
+
           }
         this.querySelector('#versoes_ div.center').textContent = 'Versões';
         if (!window.localStorage.getItem('versao-biblia')) {
@@ -2498,7 +2509,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           fn.showDialog('modal-aguarde');
           app.listaCantor();
@@ -2565,7 +2577,8 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           var dados = this.data.title.split('||'); 
           this.querySelector('#conteudoCantor_ div.center').textContent = dados[0]+' - '+dados[1];
@@ -2631,7 +2644,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              admob.interstitial.show();
+              anuncioAdmobInterstitial();
+  
             }
             this.querySelector('#score_ div.center').textContent = 'Quiz Bíblico';
         }
@@ -2675,7 +2689,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              admob.interstitial.show();
+              anuncioAdmobInterstitial();
+  
             }
             this.querySelector('#score_ div.center').textContent = 'Max Score';
             var arr = localStorage.getItem('lista-score');
@@ -2738,7 +2753,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              admob.interstitial.show();
+              anuncioAdmobInterstitial();
+  
             }
             this.querySelector('#score_ div.center').textContent = 'Ajuda';
             var arr = localStorage.getItem('lista-score');
@@ -2794,7 +2810,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-              admob.interstitial.show();
+              anuncioAdmobInterstitial();
+  
             }
             var dados = this.data.title.split('||'); 
             this.querySelector('#quiz_ div.center').textContent = dados[0];
@@ -2840,7 +2857,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           this.querySelector('#orientacaoConsolo_ div.center').textContent = 'Orientação e Consolo';
 
@@ -2902,7 +2920,8 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            anuncioAdmobInterstitial();
+
           }
           fn.showDialog('modal-aguarde');
           var dados = this.data.title.split('||'); 
@@ -2953,7 +2972,7 @@
     </ons-list>
     <script>
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          admob.interstitial.show();
+          anuncioAdmobInterstitial();
         }
         ons.getScriptPage().onInit = function () {
           this.querySelector('#planoLeitura_ div.center').textContent = 'Plano de Leitura';

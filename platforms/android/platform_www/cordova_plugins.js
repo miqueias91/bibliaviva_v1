@@ -1,32 +1,19 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
+      "id": "admob-plus-cordova.AdMob",
+      "file": "plugins/admob-plus-cordova/www/admob.js",
+      "pluginId": "admob-plus-cordova",
+      "clobbers": [
+        "admob"
+      ]
+    },
+    {
       "id": "cordova-clipboard.Clipboard",
       "file": "plugins/cordova-clipboard/www/clipboard.js",
       "pluginId": "cordova-clipboard",
       "clobbers": [
         "cordova.plugins.clipboard"
-      ]
-    },
-    {
-      "id": "cordova-promise-polyfill.Promise",
-      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
-      "pluginId": "cordova-promise-polyfill",
-      "runs": true
-    },
-    {
-      "id": "cordova-promise-polyfill.promise.min",
-      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
-      "pluginId": "cordova-promise-polyfill"
-    },
-    {
-      "id": "cordova-plugin-admob-free.AdMob",
-      "file": "plugins/cordova-plugin-admob-free/www/admob.js",
-      "pluginId": "cordova-plugin-admob-free",
-      "clobbers": [
-        "admob",
-        "AdMob",
-        "plugins.AdMob"
       ]
     },
     {
@@ -90,6 +77,17 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "window.plugins.socialsharing"
       ]
+    },
+    {
+      "id": "cordova-promise-polyfill.Promise",
+      "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+      "pluginId": "cordova-promise-polyfill",
+      "runs": true
+    },
+    {
+      "id": "cordova-promise-polyfill.promise.min",
+      "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+      "pluginId": "cordova-promise-polyfill"
     },
     {
       "id": "cordova.plugins.diagnostic.Diagnostic",
@@ -189,10 +187,9 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     }
   ];
   module.exports.metadata = {
+    "admob-plus-cordova": "1.27.0",
     "cordova-admob-sdk": "0.24.1",
     "cordova-clipboard": "1.3.0",
-    "cordova-promise-polyfill": "0.0.2",
-    "cordova-plugin-admob-free": "0.27.0",
     "cordova-plugin-androidx-adapter": "1.1.3",
     "cordova-plugin-codeplay-facebookads-free": "0.0.1",
     "cordova-plugin-console": "1.0.7",
@@ -203,6 +200,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-whitelist": "1.2.2",
     "es6-promise-plugin": "4.2.2",
     "cordova-plugin-x-socialsharing": "5.6.4",
+    "cordova-promise-polyfill": "0.0.2",
     "cordova-support-google-services": "1.3.2",
     "cordova.plugins.diagnostic": "4.0.12",
     "onesignal-cordova-plugin": "2.4.6",
