@@ -3,8 +3,8 @@
     package="com.phonegap.bibliaviva"
     android:hardwareAccelerated="true"
     android:targetSandboxVersion="2"
-    android:versionCode="10028"
-    android:versionName="1.0.28" >
+    android:versionCode="10030"
+    android:versionName="1.0.30" >
 
     <uses-sdk
         android:minSdkVersion="19"

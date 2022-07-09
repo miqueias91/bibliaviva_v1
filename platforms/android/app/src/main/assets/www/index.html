@@ -164,11 +164,25 @@
           <ons-icon icon="fa-external-link"></ons-icon>
         </div>
       </ons-list-item>
+
+      <ons-list-item onclick="versaoPro()" id="btn_remover_anuncio">
+        <div class="left">
+          <i class="fas fa-ban"></i>
+        </div>
+        <div class="center">
+          Sem anúncios
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
+
     </ons-list>
 
     <script>
       ons.getScriptPage().onInit = function() {
         // Set ons-splitter-side animation
+        $("#btn_remover_anuncio").hide();
         this.parentElement.setAttribute('animation', ons.platform.isAndroid() ? 'overlay' : 'reveal');
       };
     </script>
@@ -265,9 +279,6 @@
         <div class="title titulo_menu"><i class="fas fa-headset"></i><br>Fale Conosco</div>
       </ons-card>
     </section>
-    <section style="padding: 8px;display: none;" id="btn_remover_anuncio">
-      <ons-button onclick="versaoPro()" modifier="large"><i class="fas fa-ban"></i> REMOVER ANÚNCIOS</ons-button>
-    </section>
     <style>
       .intro {
         text-align: justify;
@@ -300,13 +311,16 @@
         fn.loadLink(url);
       };
       var versaoPro = function() {
-        var uid = window.localStorage.getItem('uid');
-        var playerID = window.localStorage.getItem('playerID');
-        var pushToken = window.localStorage.getItem('pushToken');
-        var id_user = window.localStorage.getItem('id_user');
-        var app_ = config.app_;
-        var url = 'https://www.innovatesoft.com.br/pricing?app='+app_+'&userId='+playerID+'&pushToken='+pushToken+'&uid='+uid+'&id_user='+id_user;
-        fn.loadLink(url);
+        ons.notification.confirm({
+          title: 'Deseja remover os anúncios?',
+          message: 'Assista aos vídeos e acumule pontos, ao acumular 100 pontos ganhe 7 dias sem anúncios.',
+          buttonLabels: ['Assistir e acumular','Cancelar'],
+          callback: function (index) {
+            if (1 == index) {
+              anuncioAdmobRewarded();
+            }
+          }
+        });
       };
     </script>
   </ons-page>
@@ -365,13 +379,12 @@
 
 <template id="ajustes.html">
   <ons-page>
-        <ons-toolbar id="configuracao_">
-            <div class="left">
-                <ons-back-button>Ajustes</ons-back-button>
-            </div>
-            <div class="center"></div>
-        </ons-toolbar>
-   
+    <ons-toolbar id="configuracao_">
+      <div class="left">
+        <ons-back-button>Ajustes</ons-back-button>
+      </div>
+      <div class="center"></div>
+    </ons-toolbar>  
 
       <ons-list>
         <ons-list-item onclick="showTemplateDialog()">
@@ -1436,7 +1449,7 @@
         </div>
         <div class="center"></div>
         <div class="right">
-          <span id="versaoBiblia" style="color: #f5f5f5;margin-right: 15px;font-size: 15px!important;text-transform: uppercase;"></span>
+          
           <span id="rolagem" style="color: #f5f5f5;margin-right: 10px;font-size: 15px!important;">Rolagem</span>
         </div>
       </ons-toolbar>
@@ -1480,7 +1493,7 @@
       </ons-fab>
 
       <ons-fab class="botao_controle" position="bottom center" style="bottom: 75px;" onclick="exibirVersoesBiblia()">
-        <ons-icon icon="fa-stream"></ons-icon>
+        <span id="versaoBiblia" style="color: #f5f5f5;font-size: 15px!important;text-transform: uppercase;"></span>
       </ons-fab>
 
       <ons-fab class="botao_controle" position="bottom left" style="bottom: 75px;" id="anterior">
@@ -1729,10 +1742,11 @@
                 var livro = $('#'+id).attr('livro');
                 var num_capitulo = $('#'+id).attr('num_capitulo');
                 var num_versiculo = $('#'+id).attr('num_versiculo');
-
                 var lista_versiculos = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
-                lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
-                localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
+                if(livro && num_capitulo && num_versiculo){
+                  lista_versiculos.push({cor: cor, livro: livro, num_capitulo: num_capitulo, num_versiculo: num_versiculo});
+                  localStorage.setItem("lista-versiculos", JSON.stringify(lista_versiculos));
+                }
                 usar_cores = 0;
               }      
             });
